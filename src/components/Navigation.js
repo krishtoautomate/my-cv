@@ -34,27 +34,27 @@ const Navigation = () => {
         </Typography>
         <Box>
           <Button color="inherit">
-            <ScrollLink to="summary" smooth={true} duration={500}>
+            <ScrollLink to="summary" smooth={true} duration={500} offset={-64}>
               Summary
             </ScrollLink>
           </Button>
           <Button color="inherit">
-            <ScrollLink to="skills" smooth={true} duration={500}>
+            <ScrollLink to="skills" smooth={true} duration={500} offset={-64}>
               Skills
             </ScrollLink>
           </Button>
           <Button color="inherit">
-            <ScrollLink to="experience" smooth={true} duration={500}>
+            <ScrollLink to="experience" smooth={true} duration={500} offset={-64}>
               Experience
             </ScrollLink>
           </Button>
           <Button color="inherit">
-            <ScrollLink to="education" smooth={true} duration={500}>
+            <ScrollLink to="education" smooth={true} duration={500} offset={-64}>
               Education
             </ScrollLink>
           </Button>
           <Button color="inherit">
-            <ScrollLink to="contact" smooth={true} duration={500}>
+            <ScrollLink to="contact" smooth={true} duration={500} offset={-64}>
               Contact
             </ScrollLink>
           </Button>
