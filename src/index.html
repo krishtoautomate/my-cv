@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Krish Pavuluri - CV</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Krish Pavuluri</h1>
+    <p>Montreal, QC</p>
+    <p>Mobile: 438-928-0928 | Email: <a href="mailto:krishpavulur@gmail.com">krishpavulur@gmail.com</a></p>
+    <p><a href="https://www.linkedin.com/in/krishpavuluri" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Professional Summary</h2>
+      <p>
+        Over 8 years of expertise in software testing, specializing in automation, performance testing, 
+        and DevOps practices. Adept at developing and implementing robust test strategies using tools 
+        like Selenium, Appium, and LoadRunner. Proven ability to lead testing initiatives for large-scale 
+        projects in agile and DevOps environments, ensuring seamless integration and high-quality deliverables.
+      </p>
+    </section>
+
+    <section>
+      <h2>Key Skills and Expertise</h2>
+      <ul>
+        <li>Automation Testing: Selenium (WebDriver, JDBC), Appium, Postman, Rest-Assured, Cucumber, TestNG.</li>
+        <li>Performance Testing: LoadRunner, JMeter, Dynatrace, Perfmon, Network Virtualization Agent.</li>
+        <li>DevOps & CI/CD: Jenkins, Docker, Ansible, Maven, Gradle, Git.</li>
+        <li>Languages: Java, Python, VB, JavaScript.</li>
+        <li>Database: SQL Server, Oracle DB, MySQL.</li>
+        <li>Tools & Utilities: Jira, ALM, TFS, Charles Proxy, Glassbox.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Professional Experience</h2>
+      <article>
+        <h3>Bell Canada – Montreal, QC</h3>
+        <p><strong>Automation Lead/Manager (June 2018 – January 2025)</strong></p>
+        <ul>
+          <li>Developed advanced test automation frameworks for web and mobile applications using Selenium and Appium.</li>
+          <li>Implemented robust Page Object Model (POM) and Data-Driven Testing techniques to enhance scalability.</li>
+          <li>Performed cross-platform testing across Android and iOS, using Appium and Selenium Grid for seamless automation.</li>
+        </ul>
+      </article>
+      <article>
+        <h3>CN Railway Company – Montreal, QC</h3>
+        <p><strong>Performance and Automation Specialist (January 2017 – June 2018)</strong></p>
+        <ul>
+          <li>Developed and executed automation and performance test scripts for SAP applications.</li>
+          <li>Provided test estimations, strategies, and proofs of concept for critical business transactions.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <p><strong>Bachelor’s Degree in Computer Science</strong></p>
+      <p>SRM University (2008 – 2011)</p>
+    </section>
+
+    <section>
+      <h2>Download CV</h2>
+      <button onclick="downloadCV('docx')">Download as Word</button>
+      <button onclick="downloadCV('pdf')">Download as PDF</button>
+    </section>
+  </main>
+
+  <script>
+    function downloadCV(format) {
+      const fileMap = {
+        docx: 'assets/KRISH_PAVULURI_CV.docx',
+        pdf: 'assets/KRISH_PAVULURI_CV.pdf'
+      };
+      const link = document.createElement('a');
+      link.href = fileMap[format];
+      link.download = `KRISH_PAVULURI_CV.${format}`;
+      link.click();
+    }
+  </script>
+</body>
+</html>
