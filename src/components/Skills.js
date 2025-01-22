@@ -15,6 +15,8 @@ const skills = [
   { name: "JavaScript", img: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" },
   { name: "TypeScript", img: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" },
   { name: "React", img: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" },
+  { name: "TestNG", img: "https://upload.wikimedia.org/wikipedia/commons/8/8f/TestNG.png" }, // TestNG logo
+  { name: "Cucumber BDD", img: "https://cucumber.io/img/cucumber-open-logo.png" }, // Cucumber logo
 ];
 
 const Skills = () => {
