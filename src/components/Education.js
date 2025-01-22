@@ -8,7 +8,7 @@ const Education = () => {
         Education
       </Typography>
       <Typography variant="body1">
-        <strong>Bachelor’s Degree in Computer Science</strong>
+        <strong>Bachelor’s Degree</strong>
       </Typography>
       <Typography variant="body2">SRM University (2008 – 2011)</Typography>
     </Box>
