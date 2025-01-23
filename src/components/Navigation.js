@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { AppBar, Toolbar, Typography, Button, Box, Menu, MenuItem } from '@mui/material';
-import { Link as ScrollLink } from 'react-scroll';
+import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 import { Download } from '@mui/icons-material';
 
 const Navigation = () => {
@@ -29,32 +29,72 @@ const Navigation = () => {
   return (
     <AppBar position="sticky" color="primary" sx={{ marginBottom: 4 }}>
       <Toolbar>
-        <Typography variant="h6" sx={{ flexGrow: 1 }}>
+        {/* Scroll to top when clicking on the title */}
+        <Typography
+          variant="h6"
+          sx={{ flexGrow: 1, cursor: 'pointer' }}
+          onClick={() => scroll.scrollToTop({ smooth: true, duration: 500 })}
+        >
           Krish Pavuluri
         </Typography>
         <Box>
           <Button color="inherit">
-            <ScrollLink to="summary" smooth={true} duration={500} offset={-64}>
+            <ScrollLink
+              to="summary"
+              smooth={true}
+              duration={500}
+              offset={-64}
+              spy={true}
+              activeClass="active"
+            >
               Summary
             </ScrollLink>
           </Button>
           <Button color="inherit">
-            <ScrollLink to="skills" smooth={true} duration={500} offset={-64}>
+            <ScrollLink
+              to="skills"
+              smooth={true}
+              duration={500}
+              offset={-64}
+              spy={true}
+              activeClass="active"
+            >
               Skills
             </ScrollLink>
           </Button>
           <Button color="inherit">
-            <ScrollLink to="experience" smooth={true} duration={500} offset={-64}>
+            <ScrollLink
+              to="experience"
+              smooth={true}
+              duration={500}
+              offset={-64}
+              spy={true}
+              activeClass="active"
+            >
               Experience
             </ScrollLink>
           </Button>
           <Button color="inherit">
-            <ScrollLink to="education" smooth={true} duration={500} offset={-64}>
+            <ScrollLink
+              to="education"
+              smooth={true}
+              duration={500}
+              offset={-64}
+              spy={true}
+              activeClass="active"
+            >
               Education
             </ScrollLink>
           </Button>
           <Button color="inherit">
-            <ScrollLink to="contact" smooth={true} duration={500} offset={-64}>
+            <ScrollLink
+              to="contact"
+              smooth={true}
+              duration={500}
+              offset={-64}
+              spy={true}
+              activeClass="active"
+            >
               Contact
             </ScrollLink>
           </Button>
