@@ -21,6 +21,14 @@ Single-page React resume site for Krish Pavuluri, deployed to GitHub Pages at `h
 - **CV downloads** are served as static files from `public/KRISH_PAVULURI_CV.pdf` and `.docx`. `Navigation.js` links to them via `${process.env.PUBLIC_URL}/...` — `PUBLIC_URL` is set by CRA from `homepage` in `package.json`, so the GitHub Pages base path (`/my-cv/`) is applied automatically. Duplicate copies in `src/assets/` are not used at runtime; if you replace the CV, update the files in `public/`.
 - MUI is the only UI library — prefer `@mui/material` components and the theme defined in `App.js` over custom CSS. `src/styles/styles.css` and `src/App.css` exist but are minimal.
 
+## Job-application assistant (Playwright MCP)
+
+`.mcp.json` enables the official `@playwright/mcp` server when this repo is opened in Claude Code. Pair it with `src/data/resume.mjs` (already the source of truth for the site) and `src/data/applicationAnswers.mjs` (screener answers, work-auth, salary, etc.) to assist with online applications:
+
+- **Use it interactively, not autonomously.** Drive the browser to the application form, pre-fill from the data files, but the user always reviews and clicks submit. Do not bypass CAPTCHAs or login challenges, and do not mass-apply — LinkedIn / Indeed ToS forbid automated access and accounts get flagged.
+- Treat `applicationAnswers.mjs` fields whose value is `null` as "ask the user before filling" — they're high-stakes (work authorization, sponsorship, salary) and shouldn't be guessed.
+- Resume data lives in two places intentionally: `resume.mjs` is for the website + generated PDF/DOCX; `applicationAnswers.mjs` adds the form-screener fields the website doesn't display.
+
 ## Deployment
 
 `.github/workflows/deploy.yml` runs on push to `main`: installs deps with Node 18, runs `npm run build`, and publishes `./build` to the `gh-pages` branch via `peaceiris/actions-gh-pages@v3`. No manual steps needed after merging to `main`. The `homepage` field in `package.json` must stay in sync with the deployed URL or asset paths will break.
