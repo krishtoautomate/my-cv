@@ -1,9 +1,26 @@
-import React from 'react';
-import { Box, Typography, Paper, Chip, Stack } from '@mui/material';
-import { Work } from '@mui/icons-material';
-import { motion } from 'framer-motion';
+export const personal = {
+  name: 'Krish Pavuluri',
+  location: 'Montreal, QC',
+  tagline: 'QA Automation Engineer · Test Architect · AI-Assisted Automation',
+  email: 'krishpavulur@gmail.com',
+  phone: '438-928-0928',
+  github: 'https://github.com/krishtoautomate',
+  linkedin: 'https://www.linkedin.com/in/krishpavuluri',
+};
 
-const experiences = [
+export const summary = [
+  "Software Quality Assurance professional with 10+ years of experience testing native and React Native iOS and Android apps on real devices, emulators, and simulators, plus mobile web and hybrid flows with Playwright. Designs scalable automation frameworks with TestNG, Cucumber, and Playwright Test, validates REST and SOAP services with Rest-Assured and Playwright's built-in API testing, and ships rich Extent / Allure / Playwright HTML reporting wired into Jira and Slack. Configures Jenkins, GitLab CI, and GitHub Actions pipelines to run Selenium, Appium, and Playwright suites as part of continuous testing.",
+  "Hands-on with AI-assisted automation: implementing AI services through containerized APIs, building and testing AI chatbot integrations, and using LLMs to accelerate test design, triage, and self-healing locators. Delivers and maintains regression suites at 90%+ test coverage with strong pass rates, treating tests as production code — kept up to date with the app to keep false fails low and trust in CI high.",
+];
+
+export const skillNames = [
+  'Playwright', 'Selenium', 'Appium', 'TestNG', 'Cucumber BDD', 'Postman',
+  'Jenkins', 'GitHub Actions', 'GitLab CI', 'Ansible', 'Maven', 'Gradle',
+  'Docker', 'CI/CD', 'OpenAI / LLMs', 'Java', 'TypeScript', 'JavaScript',
+  'Python', 'React', 'Jira', 'Git', 'LoadRunner',
+];
+
+export const experiences = [
   {
     company: 'UFCU',
     location: 'Austin, TX',
@@ -109,106 +126,8 @@ const experiences = [
   },
 ];
 
-const Experience = () => {
-  return (
-    <Box id="experience" sx={{ mb: 6 }}>
-      <Typography variant="h6" gutterBottom sx={{ mb: 3 }}>
-        Career Timeline
-      </Typography>
-      <Box sx={{ position: 'relative', pl: { xs: 4.5, sm: 7 } }}>
-        <Box
-          sx={{
-            position: 'absolute',
-            left: { xs: 14, sm: 22 },
-            top: 12,
-            bottom: 12,
-            width: '2px',
-            bgcolor: 'divider',
-          }}
-        />
-        {experiences.map((exp, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, x: -24 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.55, delay: i * 0.05, ease: [0.22, 1, 0.36, 1] }}
-            style={{ position: 'relative', marginBottom: 28 }}
-          >
-            <Box
-              component={motion.div}
-              initial={{ scale: 0, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.4, delay: i * 0.05 + 0.2, type: 'spring', stiffness: 260, damping: 18 }}
-              sx={{
-                position: 'absolute',
-                left: { xs: -32, sm: -47 },
-                top: 18,
-                width: 32,
-                height: 32,
-                borderRadius: '50%',
-                bgcolor: 'background.paper',
-                border: '2px solid',
-                borderColor: 'primary.main',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: 'primary.main',
-                boxShadow: 1,
-              }}
-            >
-              <Work fontSize="small" />
-            </Box>
-            <Paper
-              elevation={0}
-              component={motion.div}
-              whileHover={{ y: -3 }}
-              transition={{ type: 'spring', stiffness: 300, damping: 22 }}
-              sx={{
-                p: { xs: 2.25, sm: 3 },
-                border: '1px solid',
-                borderColor: 'divider',
-                transition: 'border-color 0.2s ease, box-shadow 0.2s ease',
-                '&:hover': { borderColor: 'primary.main', boxShadow: 2 },
-              }}
-            >
-              <Stack
-                direction={{ xs: 'column', sm: 'row' }}
-                spacing={1}
-                alignItems={{ xs: 'flex-start', sm: 'baseline' }}
-                justifyContent="space-between"
-                sx={{ mb: 1 }}
-              >
-                <Box>
-                  <Typography variant="subtitle1" sx={{ fontWeight: 700 }}>{exp.title}</Typography>
-                  <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                    {exp.company} · {exp.location}
-                  </Typography>
-                </Box>
-                <Chip label={exp.duration} size="small" color="primary" variant="outlined" />
-              </Stack>
-              <Typography variant="body2" sx={{ mb: 2, color: 'text.secondary', fontStyle: 'italic' }}>
-                {exp.summary}
-              </Typography>
-              <Box component="ul" sx={{ pl: 2.5, m: 0, mb: 2 }}>
-                {exp.points.map((p, idx) => (
-                  <Typography component="li" key={idx} variant="body2" sx={{ mb: 0.75 }}>
-                    {p}
-                  </Typography>
-                ))}
-              </Box>
-              <Stack direction="row" spacing={0.75} flexWrap="wrap" useFlexGap>
-                {exp.stack.map((t) => (
-                  <Chip key={t} label={t} size="small" sx={{ mb: 0.5 }} />
-                ))}
-              </Stack>
-            </Paper>
-          </motion.div>
-        ))}
-      </Box>
-    </Box>
-  );
+export const education = {
+  degree: 'Bachelor of Science',
+  school: 'SRM University, India',
+  period: '2007 – 2011',
 };
-
-export default Experience;

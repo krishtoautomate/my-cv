@@ -8,7 +8,9 @@
     "@emotion/styled": "^11.14.0",
     "@mui/icons-material": "^6.4.1",
     "@mui/material": "^6.4.1",
+    "@react-pdf/renderer": "^4.5.1",
     "cra-template": "1.2.0",
+    "framer-motion": "^12.38.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
@@ -21,7 +23,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "gen:docx": "node scripts/generate-docx.mjs",
+    "prebuild": "node scripts/generate-docx.mjs"
   },
   "eslintConfig": {
     "extends": [
@@ -42,6 +46,7 @@
     ]
   },
   "devDependencies": {
+    "docx": "^9.6.1",
     "gh-pages": "^6.3.0"
   }
 }
