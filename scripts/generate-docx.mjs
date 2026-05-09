@@ -1,28 +1,34 @@
 import { writeFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import {
   Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType,
   BorderStyle, ExternalHyperlink,
 } from 'docx';
 
-import { personal, summary, skillNames, experiences, education } from '../src/data/resume.mjs';
-
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const outputPath = resolve(__dirname, '..', 'public', 'KRISH_PAVULURI_CV.docx');
+const repoRoot = resolve(__dirname, '..');
 
-const para = (text, opts = {}) => new Paragraph({
-  spacing: { after: 80, ...(opts.spacing || {}) },
-  alignment: opts.alignment,
-  children: [new TextRun({ text, bold: opts.bold, italics: opts.italics, size: opts.size, color: opts.color })],
-});
+const args = process.argv.slice(2);
+const argMap = {};
+for (let i = 0; i < args.length; i += 2) argMap[args[i]] = args[i + 1];
 
-const heading = (text, level = HeadingLevel.HEADING_2) => new Paragraph({
-  heading: level,
+const dataPath = argMap['--data']
+  ? resolve(process.cwd(), argMap['--data'])
+  : resolve(repoRoot, 'src/data/resume.mjs');
+const outputPath = argMap['--output']
+  ? resolve(process.cwd(), argMap['--output'])
+  : resolve(repoRoot, 'public', 'KRISH_PAVULURI_CV.docx');
+
+const { personal, summary, skillNames, experiences, education } =
+  await import(pathToFileURL(dataPath).href);
+
+const bulletText = (p) => (typeof p === 'string' ? p : p.text);
+
+const heading = (text) => new Paragraph({
+  heading: HeadingLevel.HEADING_2,
   spacing: { before: 240, after: 120 },
-  border: {
-    bottom: { color: '1565C0', space: 4, style: BorderStyle.SINGLE, size: 8 },
-  },
+  border: { bottom: { color: '1565C0', space: 4, style: BorderStyle.SINGLE, size: 8 } },
   children: [new TextRun({ text, bold: true, color: '1565C0' })],
 });
 
@@ -96,7 +102,7 @@ const experienceBlock = () => {
       spacing: { after: 80 },
       children: [new TextRun({ text: exp.summary, italics: true, size: 20 })],
     }));
-    for (const p of exp.points) out.push(bullet(p));
+    for (const p of exp.points) out.push(bullet(bulletText(p)));
     out.push(new Paragraph({
       spacing: { after: 120 },
       children: [
@@ -120,11 +126,7 @@ const educationBlock = () => [
 ];
 
 const doc = new Document({
-  styles: {
-    default: {
-      document: { run: { font: 'Calibri', size: 22 } },
-    },
-  },
+  styles: { default: { document: { run: { font: 'Calibri', size: 22 } } } },
   sections: [{
     properties: { page: { margin: { top: 720, bottom: 720, left: 720, right: 720 } } },
     children: [

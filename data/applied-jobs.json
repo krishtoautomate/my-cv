@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "goal": {
+    "horizonDays": 10,
+    "callsTarget": 10,
+    "interviewsTarget": 10,
+    "startedAt": "2026-05-09",
+    "endsAt": "2026-05-19"
+  },
+  "jobs": []
+}
