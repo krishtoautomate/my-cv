@@ -6,7 +6,7 @@ import {
   BorderStyle, ExternalHyperlink,
 } from 'docx';
 
-import { personal, summary, skillNames, experiences, education } from '../src/data/resume.js';
+import { personal, summary, skillNames, experiences, education } from '../src/data/resume.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const outputPath = resolve(__dirname, '..', 'public', 'KRISH_PAVULURI_CV.docx');
