@@ -21,13 +21,31 @@ Single-page React resume site for Krish Pavuluri, deployed to GitHub Pages at `h
 - **CV downloads** are served as static files from `public/KRISH_PAVULURI_CV.pdf` and `.docx`. `Navigation.js` links to them via `${process.env.PUBLIC_URL}/...` — `PUBLIC_URL` is set by CRA from `homepage` in `package.json`, so the GitHub Pages base path (`/my-cv/`) is applied automatically. Duplicate copies in `src/assets/` are not used at runtime; if you replace the CV, update the files in `public/`.
 - MUI is the only UI library — prefer `@mui/material` components and the theme defined in `App.js` over custom CSS. `src/styles/styles.css` and `src/App.css` exist but are minimal.
 
-## Job-application assistant (Playwright MCP)
+## Job-application assistant (Playwright MCP + tailoring)
 
-`.mcp.json` enables the official `@playwright/mcp` server when this repo is opened in Claude Code. Pair it with `src/data/resume.mjs` (already the source of truth for the site) and `src/data/applicationAnswers.mjs` (screener answers, work-auth, salary, etc.) to assist with online applications:
+`.mcp.json` enables the official `@playwright/mcp` server when this repo is opened in Claude Code. The `.claude/skills/` directory adds three skills (`apply-to-job`, `linkedin-job-search`, `technical-recruiter-lens`) that document the full workflow.
 
-- **Use it interactively, not autonomously.** Drive the browser to the application form, pre-fill from the data files, but the user always reviews and clicks submit. Do not bypass CAPTCHAs or login challenges, and do not mass-apply — LinkedIn / Indeed ToS forbid automated access and accounts get flagged.
-- Treat `applicationAnswers.mjs` fields whose value is `null` as "ask the user before filling" — they're high-stakes (work authorization, sponsorship, salary) and shouldn't be guessed.
-- Resume data lives in two places intentionally: `resume.mjs` is for the website + generated PDF/DOCX; `applicationAnswers.mjs` adds the form-screener fields the website doesn't display.
+**Goal in flight:** `data/applied-jobs.json` → `goal` records the active sprint (10 calls + 10 interview schedules in 10 days). Update events on the per-job entries; the counters derive from `events[].type`.
+
+### Source files
+
+- **`src/data/resume.mjs`** — single source of truth for the website, generated PDF/DOCX, and tailored output. Each bullet is `{ text, tags }`; tag taxonomy is informal (lowercase, dash-separated) — extend as needed.
+- **`src/data/applicationAnswers.mjs`** — screener-only fields (phone country code, work auth, sponsorship, salary, etc.). High-stakes fields are `null` deliberately: ask the user before filling.
+- **`src/data/jobSearch.mjs`** — keywords, target countries (US + Canada), remote-only flag, LinkedIn/Indeed URL builders, and the `jobSignature` helper for repost dedupe.
+- **`data/applied-jobs.json`** — append-only tracker. Each job has a stable `signature`, `appliedVia` (linkedin / indeed / company-website / email / referral / other), full role detail, status lifecycle, and an `events[]` log. Don't overwrite history; append events.
+
+### Scripts
+
+- `npm run gen:docx` — regenerates `public/KRISH_PAVULURI_CV.docx` from `resume.mjs`. Runs automatically on `prebuild`.
+- `npm run gen:pdf` — renders `public/KRISH_PAVULURI_CV.pdf` from `resume.mjs` via `@react-pdf/renderer` in Node (using `tsx`). Optional; the website lazy-renders the same PDF in-browser on user click.
+- `npm run tailor -- --jd <path> --output <slug>` — scores each bullet's tags against the JD, reorders bullets and skill tiles to surface relevant ones, then runs `gen:docx` and `gen:pdf` to write `tailored/KRISH_PAVULURI_CV_<slug>.{pdf,docx}`. Pipe via `cat jd.txt | npm run tailor -- --output <slug>` to read JD from stdin.
+
+### Rules of the road
+
+- **Assistive only**, never autonomous. Never auto-submit a form. Never bypass CAPTCHAs / MFA / "verify it's you". Never log in for the user.
+- **Remote-only**, US or Canada (per `jobSearch.mjs`). Skip postings that don't match unless explicitly overridden.
+- **Skip reposts** — compute `jobSignature({company, title, location})` and check the tracker before queueing.
+- **Never invent experience.** The tailoring pipeline reorders honestly; it does not fabricate. If the JD requires a tool the user has never used, surface it transparently.
 
 ## Deployment
 

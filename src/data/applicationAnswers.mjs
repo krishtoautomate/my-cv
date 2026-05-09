@@ -20,17 +20,18 @@ export const applicationAnswers = {
   github: 'https://github.com/krishtoautomate',
   portfolio: 'https://krishtoautomate.github.io/my-cv/',
 
-  // Work-authorization (fill in per your situation; left as null so
-  // Claude prompts you instead of guessing on a high-stakes question)
+  // Work-authorization. Targeting both USA and Canada — confirm
+  // sponsorship answers with the user before submitting; those remain
+  // null because they are high-stakes.
   authorizedToWork: {
-    Canada: null, // true | false
-    UnitedStates: null,
+    Canada: true,
+    UnitedStates: true,
     UnitedKingdom: null,
     EuropeanUnion: null,
   },
   requiresSponsorship: {
-    Canada: null,
-    UnitedStates: null,
+    Canada: null, // confirm with user
+    UnitedStates: null, // confirm with user
   },
 
   // Experience and role preferences
@@ -42,8 +43,9 @@ export const applicationAnswers = {
     'SDET',
     'AI Test Automation Engineer',
   ],
-  workMode: ['Hybrid', 'Remote', 'Onsite'],
-  willingToRelocate: null, // true | false | 'depends'
+  // Remote-only targeting per src/data/jobSearch.mjs filters.
+  workMode: ['Remote'],
+  willingToRelocate: false,
   noticePeriod: '2 weeks',
 
   // Compensation (fill in your actual ranges)

@@ -194,7 +194,7 @@ const Experience = () => {
               <Box component="ul" sx={{ pl: 2.5, m: 0, mb: 2 }}>
                 {exp.points.map((p, idx) => (
                   <Typography component="li" key={idx} variant="body2" sx={{ mb: 0.75 }}>
-                    {p}
+                    {typeof p === 'string' ? p : p.text}
                   </Typography>
                 ))}
               </Box>
