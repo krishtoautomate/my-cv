@@ -37,6 +37,19 @@ Apply liberally on soft mismatches, conservatively on hard mismatches. Never inv
 - **Visa-sponsorship gaps.** The user is open to both US and Canada — flag if the role explicitly excludes one.
 - **Staffing-agency rebadge.** Title may be the agency, actual employer hidden. Note it but don't auto-discount; many real roles route through agencies.
 - **Vague JDs ("looking for a rockstar QA")** with no tooling specifics. Often low-quality posts; lower priority.
+- **French-required Quebec postings** (Bell, Desjardins, BDC, CGI Quebec, federal-gov bilingual). User is English-only — skip if French is listed as a hard requirement. "French as an asset" is fine to apply to.
+- **Generalist-only hiring philosophy** (Shopify "we don't post specialist seats"). Your test-specialized CV is a mismatch for their generalist Software Engineer track; deprioritize during a sprint.
+
+## Company-ownership signals that compress comp ceiling
+
+These reduce expected total comp regardless of title — surface them to the user so the offer doesn't surprise:
+
+- **Constellation Software / Volaris portfolio** (e.g. AssetWorks): famously tight comp bands, modest raises, no equity refresh. Cap ~$130k CAD even for senior.
+- **Thoma Bravo / PE-acquired** (e.g. Magnet Forensics post-2023): no public equity, cash-heavy, bonuses cap ~10%, ceilings ~$170k.
+- **Vista Equity-backed** (e.g. Vena Solutions): tight bands, options of uncertain liquidity, ~$175k cap.
+- **Recently-laid-off** (Fullscript 2024, Fortis 2024 partial): conservative offers, expect bottom-of-band.
+- **Self-disclosed comp band on the form** (Super.com $175k-$200k on Ashby): high-confidence anchor. Treat as floor for negotiation, not ceiling.
+- **Aggregator-posted** (Jobgether, Sundayy): comp wildly variable depending on the hidden partner. Don't tailor heavily; ask the recruiter for the company name on call 1.
 
 ## Outputs this skill should produce
 

@@ -19,11 +19,19 @@ description: Searches LinkedIn for QA automation roles using configured keywords
 
 - `keywords=<phrase>` — single phrase per request. LinkedIn's AND/OR logic across keywords is opaque, so do **one search per keyword** instead of stuffing them.
 - `f_WT=2` — Remote. (`1` = onsite, `3` = hybrid.)
-- `f_TPR=r604800` — past 7 days (in seconds). For past 24h use `r86400`.
+- `f_TPR=r604800` — past 7 days (in seconds). `r86400` = 24h. `r2592000` = past month — use for broader sweep when 7-day pool is exhausted.
 - `geoId=103644278` — United States. `geoId=101174742` — Canada.
 - `f_AL=true` would limit to Easy Apply — **we do not set this**. The user wants to apply on company sites too.
+- "**Actively reviewing applicants**" badge on a card is a real freshness signal — prioritize those.
 
 `src/data/jobSearch.mjs` exposes `linkedinSearchUrl(keyword, geoId)` and `allSearchUrls()`. Use those rather than hand-rolling URLs.
+
+## Noise that LinkedIn surfaces — skip-list
+
+- **"Quality Assurance Developer" / similar at DataAnnotation, Outlier, Sundayy** — these are AI-training labelling roles, not real QA. The title triggers our keyword filter but the work is human-RLHF data labelling.
+- **"Sr. Software Engineer (Automation Tools)"** at generalist tech companies — check the JD. Sometimes this is DevOps/build-infra rather than test automation. User is open to DevOps **only** when it involves GitHub Actions / Jenkins / Ansible / Helm / Docker test execution; pure SRE/Terraform/Okta infra is skip.
+- **Aggregator postings** (Jobgether, Sundayy as poster): note the aggregator, get the partner company on call 1, don't tailor heavily until then.
+- **Staffing agency without client name** (Oliver Peters, Pinnacle, S.i. Systems on direct LinkedIn posts): apply if JD is concrete, but watch for exclusivity language at form-fill time.
 
 ## Reposts — how to detect
 
