@@ -7,5 +7,130 @@
     "startedAt": "2026-05-09",
     "endsAt": "2026-05-19"
   },
-  "jobs": []
+  "jobs": [
+    {
+      "id": "openmined-staff-qa-2026-05-09",
+      "company": "OpenMined",
+      "title": "Staff QA Software Engineer",
+      "appliedAt": "2026-05-09",
+      "appliedVia": "Workable (company site, sourced via LinkedIn)",
+      "remote": true,
+      "country": "Remote",
+      "ats": "Workable",
+      "status": "submitted"
+    },
+    {
+      "id": "veeva-sr-sdet-toronto-2026-05-09",
+      "company": "Veeva Systems",
+      "title": "Senior Software Engineer in Test",
+      "location": "Toronto, Canada (Remote)",
+      "appliedAt": "2026-05-09",
+      "appliedVia": "Lever (company site, sourced via LinkedIn)",
+      "remote": true,
+      "country": "Canada",
+      "ats": "Lever",
+      "status": "submitted"
+    },
+    {
+      "id": "vena-sr-sdet-2026-05-09",
+      "company": "Vena Solutions",
+      "title": "Senior Software Developer in Test",
+      "appliedAt": "2026-05-09",
+      "appliedVia": "Pinpoint HQ (company site, sourced via LinkedIn)",
+      "remote": true,
+      "country": "Canada",
+      "ats": "Pinpoint",
+      "status": "submitted"
+    },
+    {
+      "id": "fullscript-sr-sdet-2026-05-09",
+      "company": "Fullscript",
+      "title": "Senior SDET (Software Development Engineer in Test)",
+      "appliedAt": "2026-05-09",
+      "appliedVia": "Lever (company site, sourced via LinkedIn)",
+      "remote": true,
+      "country": "Canada",
+      "ats": "Lever",
+      "status": "submitted"
+    },
+    {
+      "id": "super-staff-sdet-2026-05-10",
+      "company": "Super.com",
+      "title": "Staff Software Development Engineer in Test",
+      "appliedAt": "2026-05-10",
+      "appliedVia": "Ashby (company site, sourced via LinkedIn)",
+      "remote": true,
+      "country": "Canada",
+      "ats": "Ashby",
+      "compensationStated": "$175,000-$200,000",
+      "status": "submitted"
+    },
+    {
+      "id": "magnet-forensics-sdet-2026-05-11",
+      "company": "Magnet Forensics",
+      "title": "Software Development Engineer in Test",
+      "location": "Ottawa, ON (Remote, Canada)",
+      "appliedAt": "2026-05-11",
+      "appliedVia": "Lever (company site, sourced via LinkedIn)",
+      "remote": true,
+      "country": "Canada",
+      "ats": "Lever",
+      "compensationStated": "$175,000 CAD",
+      "notes": "Strong JD fit: explicitly wants 'agent-assisted and agentic workflows', CI/CD pipelines, automation. Law-enforcement-adjacent — Level A clearance is a plus for interviews.",
+      "status": "submitted"
+    },
+    {
+      "id": "oliverpeters-test-engineer-2026-05-11",
+      "company": "Oliver Peters Recruitment (telecom client)",
+      "title": "Software Test Engineer",
+      "appliedAt": "2026-05-11",
+      "appliedVia": "Oliver Peters company site (current.jobs ASP.NET portal, sourced via LinkedIn)",
+      "remote": true,
+      "country": "Canada (Remote — agency UK-based, client unspecified telecom)",
+      "ats": "Custom (current.jobs / .NET WebForms)",
+      "notes": "Staffing agency posting — quality of representation TBD. JD covered web UI + backend test automation, CI/CD, Load/Stress/Performance. Lower priority than direct-employer apps.",
+      "status": "submitted"
+    },
+    {
+      "id": "fortis-games-automation-sr-2026-05-11",
+      "company": "Fortis Games",
+      "title": "Sr. Software Engineer (Automation Tools) — R26_0020",
+      "appliedAt": "2026-05-11",
+      "appliedVia": "Greenhouse (company site, sourced via LinkedIn)",
+      "remote": true,
+      "country": "Canada",
+      "ats": "Greenhouse",
+      "notes": "First application with full tailored pipeline — tailored CV + custom cover letter addressing Unity gap. JD is unusually strong fit on agentic/AI angle (Playwright MCP). Risk: Unity=No on required field may auto-filter. First-tier candidate for response signal.",
+      "attachments": [
+        "tailored/KRISH_PAVULURI_CV_fortis-games-automation.docx",
+        "tailored/COVER_LETTER_fortis-games-automation.docx"
+      ],
+      "status": "submitted"
+    },
+    {
+      "id": "assetworks-qa-analyst-2026-05-11",
+      "company": "AssetWorks Inc",
+      "title": "Quality Assurance Analyst",
+      "location": "Greater Calgary Metropolitan Area, Canada (Remote)",
+      "appliedAt": "2026-05-11",
+      "appliedVia": "LinkedIn Easy Apply",
+      "remote": true,
+      "country": "Canada",
+      "ats": "LinkedIn Easy Apply",
+      "notes": "Strong JD fit on AI/automation modernization angle. JD specifically asks 'Use AI to produce, maintain and improve test cases and automation' + mentoring + modernization. 'Actively reviewing applicants' signal. Used default master CV (Easy Apply pre-flow). Profile flagged 'matches several required qualifications' by LinkedIn.",
+      "status": "submitted"
+    },
+    {
+      "id": "jobgether-senior-tech-lead-qa-2026-05-11",
+      "company": "Jobgether (crypto/blockchain partner)",
+      "title": "Senior / Tech Lead QA",
+      "appliedAt": "2026-05-11",
+      "appliedVia": "LinkedIn Easy Apply (Lever-backed, aggregator)",
+      "remote": true,
+      "country": "Canada (international remote)",
+      "ats": "Lever via Jobgether aggregator",
+      "notes": "Crypto/blockchain QA Tech Lead — domain stretch (no prior crypto experience) but JD aligns on API testing, Postman, performance/load, mentoring. Jobgether is aggregator — partner company unnamed in posting. Profile flagged 'matches some required qualifications'.",
+      "status": "submitted"
+    }
+  ]
 }

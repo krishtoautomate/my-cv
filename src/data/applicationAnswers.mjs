@@ -62,6 +62,7 @@ export const applicationAnswers = {
     drugTestOk: true,
     relocationOk: null,
     travelOk: 'Up to 25%',
+    securityClearance: 'Canadian Government Level A (Reliability)',
   },
 
   // Source of CV / cover letter (resolved at runtime)
