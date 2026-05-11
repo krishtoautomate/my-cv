@@ -1,0 +1,27 @@
+Title: Quality Assurance Analyst
+Company: AssetWorks Inc
+Location: Greater Calgary Metropolitan Area, Canada (Remote)
+
+Job Summary:
+AssetWorks is seeking an experienced QA Engineer to help grow our test driven and quality-first culture. You will work closely with the team to ensure our high-test standards are maintained while driving new test strategies and processes.
+
+This is a "lead by example" role. The successful candidate will be able to balance changing priorities. From modernizing and maintaining the automation test suite and framework, to assisting with manual testing (as required), to evangelizing and mentoring best practices to the team. You have a desire to learn and solve problems in the pursuit of excellence.
+
+This position is remote in Canada and will report to the QA Manager.
+
+Essential Duties and Responsibilities:
+- Propose and implement improvements to automation and test processes.
+- Use AI to produce, maintain and improve test cases and automation.
+- Modernize and maintain test automation practice, infrastructure and tools.
+- Support and mentor other QA in modern automation practices.
+- Collaborate with and promote automation practices to other teams.
+- Participate in team planning and story grooming.
+- Conduct test reviews, improve and maintain quality of the test coverage.
+- Define and organize the teams test planning for releases.
+- Publish regular reports that measure the efficiencies and ROI of implemented automation.
+- Work to streamline operations for efficiency, cost saving, and reliability of the products and processes.
+- Providing concise and clear information in bug reports that developers can work with without needing extra information.
+- As needed, write and execute manual regression, test planning, test case creation, environment setup, functional and regression testing, and bug creation and validation.
+- Produce internal documentation, as required.
+
+Keywords: QA Automation, AI, test automation framework, modernization, mentoring, CI/CD, test coverage, bug reports, manual regression
