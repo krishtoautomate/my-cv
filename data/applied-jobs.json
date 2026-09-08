@@ -955,6 +955,254 @@
         }
       ],
       "notes": "Passes every hard filter (Canada, fully remote, no hybrid, no French, Staff level at a strong company - 4M+ Canadians, $155B AUA) and there is one genuinely adjacent hook: they are building an in-house AI-assisted incident response product, which touches Krish's agentic/LLM work. If he ever wants to move toward platform/reliability rather than QA, this is the kind of req to revisit - but it is a career pivot, not a lateral move."
+    },
+    {
+      "id": "coursera-sr-test-engineer-2026-09-08",
+      "signature": "coursera|senior-software-test-engineer|toronto-on",
+      "company": "Coursera (Coursera + Udemy)",
+      "title": "Senior Software Test Engineer (Test Infrastructure and Tooling)",
+      "location": "Toronto, ON - Canada",
+      "url": "https://job-boards.greenhouse.io/coursera/jobs/6141559004",
+      "appliedAt": "2026-09-08",
+      "appliedVia": "company-website",
+      "remote": true,
+      "country": "Canada",
+      "ats": "Greenhouse",
+      "tailoredCvPath": "tailored/KRISH_PAVULURI_CV_coursera-sr-test-engineer.pdf",
+      "compensation": {
+        "disclosedBand": "CAD $137,600 - $172,000 base + variable pay, equity, benefits",
+        "askedRange": "not requested"
+      },
+      "role": {
+        "level": "senior",
+        "workMode": "remote-per-indeed-filter",
+        "techStack": [
+          "playwright",
+          "selenium",
+          "cypress",
+          "puppeteer",
+          "mcp-servers",
+          "agentic-testing",
+          "ai-evals",
+          "github-actions",
+          "circleci",
+          "kubernetes",
+          "rest-assured"
+        ],
+        "matchedKeywords": [
+          "Playwright MCP",
+          "MCP",
+          "Agentic AI",
+          "Playwright",
+          "Selenium",
+          "Rest-Assured",
+          "GitHub Actions",
+          "CI/CD",
+          "AWS",
+          "Azure",
+          "GCP",
+          "JavaScript",
+          "Java",
+          "Python"
+        ]
+      },
+      "status": "applied",
+      "events": [
+        {
+          "date": "2026-09-08",
+          "type": "applied",
+          "detail": "Submitted via Greenhouse; confirmed by redirect to /confirmation with page title 'Thank you for applying'. Found on indeed.ca (not LinkedIn). Screeners: legally authorized Yes, sponsorship No, currently residing in this country Yes, prior Coursera/Udemy employee No, consider for future roles Yes, Coursera-Udemy data sharing Yes. Voluntary self-ID set to decline on all four (gender, ethnicity, veteran, disability) - all were marked required on this form. No salary question was asked, so the $120k ask stays open for the recruiter call and their band starts well above it."
+        }
+      ],
+      "notes": "BEST-PAID MATCH SUBMITTED THIS SESSION. CAD $137,600-$172,000, i.e. the floor is already $17.6k above Krish's $120k ask. The JD is an unusually direct hit: 'Research and identify AI augmented agentic solutions and lead large-scale test automation initiatives', '1+ years of experience in developing AI augmented agentic testing frameworks, evals for AI driven applications', and it names MCP SERVERS explicitly alongside Puppeteer/Cypress/Playwright/Selenium. That maps onto Krish's Playwright MCP multi-agent pipeline and model-evaluation work better than any other req found. Also wants 7+ yrs testing (he has 10+), 6+ yrs UI and API automation, 6+ yrs CI/CD with GitHub Actions/CircleCI/Kubernetes. VERIFY AT SCREEN: the posting is listed Toronto, ON and does NOT state remote or hybrid anywhere in the JD - it surfaced under Indeed's remote filter, which is why it passed the remote-only rule. Confirm work arrangement on the first call; if it turns out to be hybrid, it fails Krish's hard filter."
+    },
+    {
+      "id": "ciklum-sr-ai-eval-engineer-2026-09-08",
+      "signature": "ciklum|senior-artificial-intelligence-evaluation-engineer|canada-remote",
+      "company": "Ciklum",
+      "title": "Senior Artificial Intelligence Evaluation Engineer",
+      "location": "Canada (Remote) - confirmed on their portal",
+      "url": "https://explore-jobs.ciklum.com/en/sites/ciklum-career/job/4470",
+      "reqId": "4470",
+      "appliedAt": "2026-09-08",
+      "appliedVia": "company-website",
+      "remote": true,
+      "country": "Canada",
+      "ats": "Oracle Cloud HCM (explore-jobs.ciklum.com)",
+      "tailoredCvPath": "tailored/KRISH_PAVULURI_CV_ciklum-ai-eval-engineer.pdf",
+      "compensation": {
+        "disclosedBand": null,
+        "askedRange": "120000 CAD yearly (entered in Minimum Pay)"
+      },
+      "role": {
+        "level": "senior",
+        "workMode": "remote",
+        "techStack": [
+          "llm-evaluation",
+          "eval-harness",
+          "golden-datasets",
+          "llm-as-judge",
+          "drift-monitoring",
+          "ml"
+        ],
+        "matchedKeywords": [
+          "Model Evaluation",
+          "Prompt Engineering",
+          "RAG",
+          "Agentic AI",
+          "MLOps / Model CI/CD",
+          "AI Governance & Compliance"
+        ]
+      },
+      "status": "applied",
+      "events": [
+        {
+          "date": "2026-09-08",
+          "type": "applied",
+          "detail": "Submitted via Oracle Cloud HCM. Confirmed on the My Applications page: 'Senior Artificial Intelligence Evaluation Engineer - Canada (Remote) - You are considered for a vacancy - Ciklum 4470 Applied on 09/08/2026'. Found on indeed.ca. No password account needed - email-only flow. Entered Minimum Pay 120000 Canadian Dollar Yearly; opted in to job-opportunity updates, not marketing. Selected the 'AI Platform' preferred skill. NOTE: the form contains a honeypot field (honey-pot-1) which was deliberately left empty."
+        }
+      ],
+      "notes": "CLOSEST ROLE YET TO KRISH'S AI DIFFERENTIATOR - it is a pure AI/LLM evaluation seat: build the central eval harness and templates, create golden datasets, set and defend pass thresholds, audit evals, stand up production monitoring for drift and regression. GAPS TO PREP HONESTLY: (1) '4+ years in ML/LLM evaluation' - Krish's AI work dates from ~Feb 2025, roughly 1.5 yrs; the CV's '4+ years defining AI quality engineering strategy' line is the known-unverified claim, so expect it to be probed and soften rather than defend it. The requirement reads 'ML/LLM evaluation, QA engineering for AI systems, OR applied research engineering' and his QA-for-AI-systems experience is what qualifies him. (2) 'LLM-as-judge patterns and their failure modes' and 'statistical rigor on small samples' are named explicitly - he does model evaluation for correctness/regression/drift, which is adjacent but he should not overclaim LLM-as-judge specifically. (3) Domain is healthcare/clinical ('business and clinical reviewers', 'safety and medical-accuracy suites') and he has banking/telecom, not healthcare. Ciklum is a 4,000-person services firm, so this is likely a client placement - establish the end client on the first call."
+    },
+    {
+      "id": "vancity-f3a10fe4-2026-09-08",
+      "signature": "vancity|qe-lead-payments|vancouver-bc-hybrid",
+      "company": "Vancity (Vancouver City Savings Credit Union)",
+      "title": "QE Lead, Payments",
+      "location": "Vancouver, BC - HYBRID, candidates limited to BC and Ontario",
+      "url": "https://ca.indeed.com/viewjob?jk=f3a10fe45bc4b190",
+      "appliedAt": null,
+      "appliedVia": null,
+      "remote": false,
+      "country": "Canada",
+      "ats": null,
+      "compensation": {
+        "disclosedBand": "$113,000 - $153,000 CAD"
+      },
+      "status": "skipped",
+      "events": [
+        {
+          "date": "2026-09-08",
+          "type": "seen",
+          "detail": "Found on indeed.ca."
+        },
+        {
+          "date": "2026-09-08",
+          "type": "skipped",
+          "detail": "Fails on two independent counts. (1) Explicitly hybrid: 'While this position provides a hybrid work arrangement, you will be expected to be on-site for events and business demands when needed' - hits Krish's hard no-hybrid rule. (2) Geography: 'we are open to candidates in BC and Ontario' - Krish is in Quebec, so he is outside the eligible provinces regardless of the hybrid clause."
+        }
+      ],
+      "notes": "Would have been a strong fit on content: the JD says outright 'This is not a traditional QA Lead role. We are looking for a senior engineer (senior SDET) to lead a team of quality engineers in a dotted line capacity building scalable, code-driven quality solutions', with deep automation, API-first testing, AI-driven/agentic techniques and non-functional validation. Band $113,000-$153,000 CAD sits comfortably above the $120k ask. Blocked on location only. Payments/member-facing platform domain lines up with Krish's UFCU and ATB banking work."
+    },
+    {
+      "id": "vancity-58e26080-2026-09-08",
+      "signature": "vancity|qe-lead-quality-non-functional|vancouver-bc-hybrid",
+      "company": "Vancity (Vancouver City Savings Credit Union)",
+      "title": "QE Lead, Quality, Non-Functional",
+      "location": "Vancouver, BC - HYBRID, candidates limited to BC and Ontario",
+      "url": "https://ca.indeed.com/viewjob?jk=58e26080551ef033",
+      "appliedAt": null,
+      "appliedVia": null,
+      "remote": false,
+      "country": "Canada",
+      "ats": null,
+      "compensation": {
+        "disclosedBand": "$113,000 - $153,000 CAD"
+      },
+      "status": "skipped",
+      "events": [
+        {
+          "date": "2026-09-08",
+          "type": "seen",
+          "detail": "Found on indeed.ca."
+        },
+        {
+          "date": "2026-09-08",
+          "type": "skipped",
+          "detail": "Fails on two independent counts. (1) Explicitly hybrid: 'While this position provides a hybrid work arrangement, you will be expected to be on-site for events and business demands when needed' - hits Krish's hard no-hybrid rule. (2) Geography: 'we are open to candidates in BC and Ontario' - Krish is in Quebec, so he is outside the eligible provinces regardless of the hybrid clause."
+        }
+      ],
+      "notes": "Would have been a strong fit on content: the JD says outright 'This is not a traditional QA Lead role. We are looking for a senior engineer (senior SDET) to lead a team of quality engineers in a dotted line capacity building scalable, code-driven quality solutions', with deep automation, API-first testing, AI-driven/agentic techniques and non-functional validation. Band $113,000-$153,000 CAD sits comfortably above the $120k ask. Blocked on location only. Non-functional/performance focus (performance, scalability, reliability, resilience, observability) lines up with his JMeter, k6 and LoadRunner background - arguably the better of the two for him."
+    },
+    {
+      "id": "fiscalai-swe-quality-terminal-2026-09-08",
+      "signature": "fiscal-ai|software-engineer-quality-terminal|remote-toronto",
+      "company": "Fiscal.ai (formerly FinChat)",
+      "title": "Software Engineer: Quality (Terminal)",
+      "location": "Remote, Full time - Toronto, Ontario, Canada (occasional in-person at downtown Toronto co-working space)",
+      "url": "https://apply.workable.com/fiscal-ai/j/CCA78AA894/",
+      "appliedAt": "2026-09-08",
+      "appliedVia": "company-website",
+      "remote": true,
+      "country": "Canada",
+      "ats": "Workable",
+      "tailoredCvPath": "tailored/KRISH_PAVULURI_CV_fiscalai-swe-quality.pdf",
+      "compensation": {
+        "disclosedBand": "$100,000 - $220,000 CAD + equity options",
+        "askedRange": "not requested"
+      },
+      "role": {
+        "level": "senior",
+        "workMode": "remote",
+        "techStack": [
+          "playwright",
+          "typescript",
+          "react",
+          "nextjs",
+          "vitest",
+          "github-actions",
+          "cloudflare-workers",
+          "postgresql",
+          "sentry"
+        ],
+        "matchedKeywords": [
+          "Playwright",
+          "TypeScript",
+          "React",
+          "Python",
+          "GitHub Actions",
+          "Claude Code",
+          "GitHub Copilot",
+          "Agentic AI",
+          "OpenAI / LLMs"
+        ]
+      },
+      "status": "applied",
+      "events": [
+        {
+          "date": "2026-09-08",
+          "type": "applied",
+          "detail": "Submitted via Workable; confirmed by ?success URL and 'Your application has been submitted successfully', copy emailed to krishpavulur@gmail.com. Found on indeed.ca (their Indeed listing is Indeed-Apply-only and the browser is not logged in to Indeed, so applied on the Workable board instead). 23 required yes/no screeners answered honestly - NO given to paid-data-products/paywalls, Cloudflare Workers/Firebase/PostgreSQL (x2), Highcharts, finance coursework/CFA, and Sentry/PostHog/Linear. YES on the finance-interest question per Krish's explicit confirmation on 2026-09-08 that he has personal investing knowledge. Free-text pitch states the Next.js, Cloudflare Workers, Firestore and Highcharts gaps outright rather than hiding them."
+        }
+      ],
+      "notes": "Capital-markets research terminal. Band $100k-$220k + equity is the widest and highest-topped of the session; they say explicitly they hire on talent and fit, not years. STRONG SIDE: owns and builds the Playwright E2E framework running in CI against preview deploys, plus daily AI coding agents - both squarely Krish. STRETCH: it is a fix-it-yourself engineering role across a React/Next.js frontend and Cloudflare Workers backend, not a pure test-automation seat, and they weight finance fluency heavily (income statements, LTM/NTM, P/E sanity). Krish confirmed personal investing knowledge; his banking QA at UFCU/ATB is systems testing rather than securities research, so expect that distinction to come up. LOCATION NUANCE: the job posting says 'Remote-first work with occasional in-person work in our co-working space in downtown Toronto' and the Workable header says Remote/Full time - it never says hybrid, so it passed the no-hybrid rule. However the company careers landing page separately advertises 'Flexible remote and hybrid work'. From Montreal, 'occasional in-person in Toronto' means flights - worth pinning down on the first call."
+    },
+    {
+      "id": "devoted-studios-qa-analyst-2026-09-08",
+      "signature": "devoted-studios|qa-analyst|montreal-qc-remote",
+      "company": "Devoted Studios",
+      "title": "QA Analyst",
+      "location": "Montréal, QC (Remote)",
+      "url": "https://ca.indeed.com/viewjob?jk=c8f52758360c7734",
+      "appliedAt": null,
+      "appliedVia": null,
+      "remote": true,
+      "country": "Canada",
+      "ats": "Indeed Easy Apply",
+      "status": "skipped",
+      "events": [
+        {
+          "date": "2026-09-08",
+          "type": "seen",
+          "detail": "Found on indeed.ca after the Cloudflare challenge was cleared."
+        },
+        {
+          "date": "2026-09-08",
+          "type": "skipped",
+          "detail": "Two mismatches. (1) Hard domain gate: '3+ years of professional QA experience within the video game industry' - Krish has none. (2) Scope: the role is manual gameplay QA (functional, gameplay, regression, exploratory and integration testing, bug reports with repro steps) with no test automation in the JD at all, which is a down-level for a 10+ yr automation architect."
+        }
+      ],
+      "notes": "Globally remote game co-development studio; partners include Epic, Xbox, Meta, Riot, Obsidian, Gearbox. Passes location filters (remote, Montreal, no hybrid, no French) but fails on domain and scope. Only revisit if they post an automation/SDET req."
     }
   ]
 }
