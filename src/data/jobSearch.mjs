@@ -2,21 +2,32 @@
 // indeed-job-search, apply-to-job). Tweak as the search progresses.
 
 export const searchKeywords = [
-  'playwright',
-  'qa automation',
-  'appium',
   'sdet',
-  'test architect',
+  'appium',
+  'playwright',
+  'selenium',
+  'ai automation',
 ];
 
 // LinkedIn geo IDs and Indeed base hosts for each target country.
+// Canada only as of 2026-09-08 — Krish's primary focus. The US entry is
+// kept but commented out rather than deleted, since he is TN-eligible and
+// may want to reopen it; uncomment to search both again.
 export const targetLocations = [
-  { country: 'United States', linkedinGeoId: '103644278', indeedBase: 'https://www.indeed.com' },
-  { country: 'Canada',        linkedinGeoId: '101174742', indeedBase: 'https://ca.indeed.com' },
+  { country: 'Canada', linkedinGeoId: '101174742', indeedBase: 'https://ca.indeed.com' },
+  // { country: 'United States', linkedinGeoId: '103644278', indeedBase: 'https://www.indeed.com' },
 ];
 
 export const filters = {
+  // remoteOnly is strict as of 2026-09-08: if a posting says "hybrid"
+  // anywhere, skip it, even when the comp and technical fit are strong and
+  // the in-office clause only binds people near an office. Krish is Montreal
+  // and will not relocate or commute.
   remoteOnly: true,
+  skipHybrid: true,
+  // Krish is not bilingual. Skip postings that require French; "French as an
+  // asset" is fine.
+  skipFrenchRequired: true,
   postedWithinDays: 7,
   excludeReposts: true, // dedupe against data/applied-jobs.json signatures
 };

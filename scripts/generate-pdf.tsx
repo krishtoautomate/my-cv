@@ -5,7 +5,7 @@
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import React from 'react';
-import ReactPDF from '@react-pdf/renderer';
+import ReactPDF, { Font } from '@react-pdf/renderer';
 
 async function main() {
   const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -22,12 +22,27 @@ async function main() {
     ? resolve(process.cwd(), argMap['--output'])
     : resolve(repoRoot, 'public/KRISH_PAVULURI_CV.pdf');
 
+  // Register Inter from disk so the generated PDF matches the one the
+  // website renders in-browser (see src/cv/registerFonts.js).
+  const fontDir = resolve(repoRoot, 'src/cv/fonts');
+  Font.register({
+    family: 'Inter',
+    fonts: [
+      { src: resolve(fontDir, 'Inter-Regular.ttf'), fontWeight: 400 },
+      { src: resolve(fontDir, 'Inter-Medium.ttf'), fontWeight: 500 },
+      { src: resolve(fontDir, 'Inter-SemiBold.ttf'), fontWeight: 600 },
+      { src: resolve(fontDir, 'Inter-Bold.ttf'), fontWeight: 700 },
+      { src: resolve(fontDir, 'Inter-Italic.ttf'), fontWeight: 400, fontStyle: 'italic' },
+    ],
+  });
+  Font.registerHyphenationCallback((word: string) => [word]);
+
   const resume: any = await import(pathToFileURL(dataPath).href);
   const { default: CVDocument } = await import(
     pathToFileURL(resolve(repoRoot, 'src/cv/CVDocument.jsx')).href
   );
 
-  await ReactPDF.renderToFile(React.createElement(CVDocument, { resume }), outputPath);
+  await ReactPDF.renderToFile(React.createElement(CVDocument, { resume, fontFamily: 'Inter' }), outputPath);
   console.log(`Wrote ${outputPath}`);
 }
 

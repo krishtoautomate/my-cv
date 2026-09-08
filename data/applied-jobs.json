@@ -131,6 +131,830 @@
       "ats": "Lever via Jobgether aggregator",
       "notes": "Crypto/blockchain QA Tech Lead — domain stretch (no prior crypto experience) but JD aligns on API testing, Postman, performance/load, mentoring. Jobgether is aggregator — partner company unnamed in posting. Profile flagged 'matches some required qualifications'.",
       "status": "submitted"
+    },
+    {
+      "id": "bimm-web-qa-automation-2026-05-14",
+      "signature": "bimm|web-qa-automation-analyst-contract|toronto-on",
+      "company": "BIMM",
+      "title": "Web QA Automation Analyst, Contract (Intermediate)",
+      "location": "Toronto, ON (Remote across Canada, EST hours)",
+      "url": "https://www.linkedin.com/jobs/view/4414679027",
+      "appliedAt": "2026-05-14",
+      "appliedVia": "LinkedIn Easy Apply (Greenhouse-powered)",
+      "remote": true,
+      "country": "Canada",
+      "ats": "LinkedIn Easy Apply / Greenhouse",
+      "tailoredCvPath": "tailored/KRISH_PAVULURI_CV_bimm-web-qa-automation.pdf",
+      "compensation": {
+        "postedRange": "$20-$45 CAD/hr",
+        "askedRate": "$60 CAD/hr",
+        "askedAnnualEquiv": "~$124.8k CAD/yr"
+      },
+      "notes": "Toronto agency, contract through Dec 24 2026. Cypress + JavaScript stack (resume gap — Selenium qualifies under 'Cypress or Selenium'). Heavy AI-assisted testing emphasis (Copilot/Cursor for Cypress authoring, LLM output validation, prompt-driven test design) — strong fit with Playwright+AI narrative. Asked $60 CAD/hr against their $20-45 ceiling — anchored as senior because 'Intermediate' role + 10+ yrs exp + sole-QA-in-pod responsibility. Resume gaps: no Cypress, no accessibility, no BrowserStack/Axe (the latter is nice-to-have only). Posted 38 min before applying, 2 applicants ahead. Application powered by Greenhouse on LinkedIn. Confirmed via /post-apply/next-best-action/ URL flip.",
+      "status": "submitted",
+      "events": [
+        {
+          "date": "2026-05-14T18:55:00Z",
+          "type": "applied"
+        }
+      ]
+    },
+    {
+      "id": "point32health-ai-test-automation-architect-2026-07-03",
+      "signature": "point32health|ai-test-automation-architect|remote-us",
+      "company": "Point32Health",
+      "title": "AI Test Automation Architect",
+      "location": "US (assumed remote — confirm with recruiter)",
+      "appliedAt": "2026-07-03",
+      "appliedVia": "email (recruiter submission to client)",
+      "remote": true,
+      "country": "US",
+      "ats": "n/a (recruiter/vendor submission)",
+      "tailoredCvPath": "tailored/KRISH_PAVULURI_CV_ai-test-automation-architect.pdf",
+      "notes": "Recruiter-sourced role for client Point32Health (Harvard Pilgrim + Tufts Health Plan; healthcare payer). JD: enterprise AI-driven test automation strategy, agentic AI for autonomous testing, self-healing scripts, CI/CD, UI/API/perf/security. Strong fit on agentic Playwright MCP pipeline (added to resume 2026-07-03). JD asks Cypress + Karate — not on resume by design, expect screening question. Remote status and rate not yet confirmed with recruiter.",
+      "status": "submitted-to-recruiter",
+      "events": [
+        {
+          "date": "2026-07-03",
+          "type": "recruiter-contact",
+          "detail": "Recruiter shared JD for client Point32Health; tailored CV prepared to send back"
+        },
+        {
+          "date": "2026-07-03",
+          "type": "cv-sent",
+          "detail": "Tailored CV (ai-test-automation-architect) emailed to recruiter for submission to Point32Health"
+        },
+        {
+          "date": "2026-07-03",
+          "type": "research-completed",
+          "detail": "Company research brief saved to data/research/point32health.md — modernization programs, financial red flags, talking points"
+        }
+      ],
+      "researchPath": "data/research/point32health.md"
+    },
+    {
+      "id": "maintainx-sr-sdet-quality-platform-2026-07-26",
+      "signature": "maintainx|senior-software-developer-in-test-quality-platform|toronto",
+      "company": "MaintainX",
+      "title": "Senior Software Developer in Test, Quality Platform",
+      "location": "Toronto / Montreal, Canada (Remote)",
+      "url": "https://jobs.ashbyhq.com/maintainx/c03a9fff-4d47-4382-822c-f5b3c3803604",
+      "appliedAt": "2026-07-26",
+      "appliedVia": "company-website",
+      "remote": true,
+      "country": "Canada",
+      "ats": "Ashby",
+      "tailoredCvPath": "tailored/KRISH_PAVULURI_CV_maintainx-sr-sdet-quality-platform.pdf",
+      "compensation": {
+        "postedRange": "Not disclosed",
+        "askedAnnual": "$130,000 CAD"
+      },
+      "notes": "Strongest JD fit to date: JD explicitly names Claude Code, Playwright, AI-assisted test authoring infrastructure, CI/CD integration standards, agentic/autonomous AI systems, and shared quality-platform tooling — a direct match for the Playwright MCP + AI-assisted testing narrative. Matched ATS keywords: CI/CD, Agentic AI, Claude Code, Playwright, Selenium, GitHub Actions, GitLab CI, Playwright MCP. Salary ask $130k CAD (top of Krish's 125-130k range; current comp $120k; GTA senior median ~$178-182k so headroom remains). Sponsorship=No, authorized to work in Canada. Diversity + U.S. EEO self-ID surveys completed (age 30-39, male, Asian/Indian origin, non-veteran, no disability). MAJOR CONTEXT: Autodesk agreed to acquire MaintainX (~$3.6B all-cash, announced 2026-05-27, pending regulatory close) with $150M retention RSUs — reframes 'meaningful equity' and is a fair recruiter-call question. Confirmed submission via 'Success — Thank you for applying to MaintainX!' page state.",
+      "status": "submitted",
+      "researchPath": "data/research/maintainx.md",
+      "events": [
+        {
+          "date": "2026-07-26",
+          "type": "applied",
+          "detail": "Applied via Ashby (company site). Tailored CV attached; salary ask $130k CAD; confirmed by success page."
+        },
+        {
+          "date": "2026-07-26",
+          "type": "research-completed",
+          "detail": "Company research brief saved to data/research/maintainx.md — funding, Autodesk acquisition, eng/QA culture, talking points."
+        }
+      ]
+    },
+    {
+      "id": "ostro-veeva-qa-engineer-2026-07-26",
+      "signature": "ostro|qa-engineer-ostro|canada",
+      "company": "Ostro (Veeva Systems)",
+      "title": "QA Engineer - Ostro",
+      "location": "Canada (Remote / Work Anywhere)",
+      "url": "https://www.linkedin.com/jobs/view/4444673075",
+      "appliedVia": "linkedin",
+      "remote": true,
+      "country": "Canada",
+      "ats": "LinkedIn (offsite, Veeva careers)",
+      "notes": "SKIPPED per user. Ostro is a Veeva Systems brand — Krish already has an active application to Veeva (Senior Software Engineer in Test, Toronto, veeva-sr-sdet-toronto-2026-05-09). This 'QA Engineer - Ostro' role requires only 3+ years (Krish has 10+), is more junior than his level, and likely below his $120k FTE floor. Good stack fit (Cypress/Playwright/Selenium, API, CI/CD, AI/LLM testing) but level/employer overlap made it not worth a second Veeva application during the sprint. JD saved to tailored/ostro-veeva-qa-engineer.jd.txt.",
+      "status": "skipped",
+      "events": [
+        {
+          "date": "2026-07-26",
+          "type": "seen",
+          "detail": "Surfaced in LinkedIn SDET/QA scan; identified as Veeva-owned and below target level."
+        },
+        {
+          "date": "2026-07-26",
+          "type": "skipped",
+          "detail": "User chose to skip — duplicate employer (active Veeva app) + junior 3+ yr role."
+        }
+      ]
+    },
+    {
+      "id": "apexon-sr-mobile-ai-testing-2026-07-26",
+      "signature": "apexon|senior-mobile-automation-test-engineer-ai-driven-testing|ontario-canada",
+      "company": "Apexon",
+      "title": "Senior Mobile Automation Test Engineer (AI-Driven Testing)",
+      "location": "Ontario, Canada (Remote)",
+      "url": "https://www.linkedin.com/jobs/view/4442062745",
+      "appliedAt": "2026-07-26",
+      "appliedVia": "linkedin",
+      "remote": true,
+      "country": "Canada",
+      "ats": "LinkedIn Easy Apply",
+      "tailoredCvPath": "tailored/KRISH_PAVULURI_CV_apexon-sr-mobile-ai-testing.pdf",
+      "notes": "Digital-engineering services firm (GS AM + Everstone-owned, ~6k staff). JD: 10+ yrs mobile automation (Appium/Espresso/XCTest), AI/ML test tools (Applitools/Test.ai), CI/CD (Jenkins/GitLab CI/Azure DevOps). Strong fit on Krish's Appium + AI-assisted testing + CI/CD. 'Actively reviewing applicants' freshness signal. Easy Apply screeners answered: Test Automation Frameworks=10 yrs, AI-Driven Content=2 yrs (honest/conservative — AI-assisted work is recent), Mobile Testing=10 yrs. 'Follow Apexon' unchecked. Services firm = likely client-placement; below-market pay reputation (senior QA avg ~C$106.5k) — clarify FTE-vs-contract and anchor comp >= $120k floor on recruiter call. Research: data/research/apexon.md. Confirmed via /post-apply/next-best-action/ URL flip.",
+      "status": "submitted",
+      "researchPath": "data/research/apexon.md",
+      "events": [
+        {
+          "date": "2026-07-26",
+          "type": "applied",
+          "detail": "Submitted via LinkedIn Easy Apply with tailored CV; confirmed by post-apply next-best-action URL."
+        },
+        {
+          "date": "2026-07-26",
+          "type": "research-completed",
+          "detail": "Company research brief saved to data/research/apexon.md."
+        }
+      ]
+    },
+    {
+      "id": "gainbridge-lead-qa-automation-2026-07-26",
+      "signature": "gainbridge|lead-qa-automation-engineer|united-states",
+      "company": "Gainbridge",
+      "title": "Lead QA Automation Engineer",
+      "location": "United States (Remote)",
+      "url": "https://www.linkedin.com/jobs/view/4420748218",
+      "appliedAt": "2026-07-26",
+      "appliedVia": "linkedin",
+      "remote": true,
+      "country": "US",
+      "ats": "LinkedIn Easy Apply",
+      "tailoredCvPath": "tailored/KRISH_PAVULURI_CV_gainbridge-lead-qa-automation.pdf",
+      "notes": "First US-remote application of the TN-focused batch. Fintech/insurtech product. Playwright/TypeScript + CI/CD automation lead role, no citizenship/clearance gate. Easy Apply screeners: JS=5, TS=5, Test Automation=10, manual test cases=10, Playwright=Yes, built framework from scratch=Yes, wrote test plan/strategy=Yes. Work auth: authorized in US=Yes, require H-1B sponsorship=No (TN is not H-1B; Canadian citizen, TN-eligible). 'Follow Gainbridge' unchecked. 'Actively reviewing applicants'. Confirmed via /post-apply/next-best-action/ URL flip.",
+      "status": "submitted",
+      "events": [
+        {
+          "date": "2026-07-26",
+          "type": "applied",
+          "detail": "Submitted via LinkedIn Easy Apply with tailored CV; work auth answered authorized=Yes / H-1B sponsorship=No (TN-eligible). Confirmed by post-apply URL."
+        }
+      ]
+    },
+    {
+      "id": "assured-staff-sdet-2026-07-26",
+      "signature": "assured|staff-software-development-engineer-in-test-sdet|remote-us",
+      "company": "Assured",
+      "title": "Staff Software Development Engineer in Test (SDET)",
+      "location": "Remote (US)",
+      "url": "https://www.linkedin.com/jobs/view/4415541162",
+      "appliedAt": "2026-07-26",
+      "appliedVia": "company-website",
+      "remote": true,
+      "country": "US",
+      "ats": "Ashby",
+      "tailoredCvPath": "tailored/KRISH_PAVULURI_CV_assured-staff-sdet.pdf",
+      "compensation": {
+        "postedRange": "$160,000-$190,000 USD + equity"
+      },
+      "notes": "US-remote Staff SDET, TypeScript-focused, AI-assisted testing, $160-190K+equity — strongest comp of the US batch. Ashby form. Screeners: reside in US=No (Krish is in Canada — FLAGGED as possible filter for a US-based role), require sponsorship=No (TN stance), worked at fast-paced startup=Yes (RobotActions), written TypeScript=Yes. Pronouns He/Him; voluntary demographics Male / South Asian / non-veteran. Confirmed submitted via Ashby success page (submit button gone). Watch: 'reside in US=No' may cause auto-filter despite TN eligibility.",
+      "status": "submitted",
+      "events": [
+        {
+          "date": "2026-07-26",
+          "type": "applied",
+          "detail": "Submitted via Ashby with tailored CV. reside-in-US=No, sponsorship=No. Confirmed by Ashby success page."
+        }
+      ]
+    },
+    {
+      "id": "topstep-sr-sdet-2026-07-26",
+      "signature": "topstep|senior-software-development-engineer-in-test-sdet|united-states",
+      "company": "Topstep",
+      "title": "Senior Software Development Engineer in Test (SDET)",
+      "location": "United States (Remote)",
+      "url": "https://www.linkedin.com/jobs/view/4444488132",
+      "appliedAt": "2026-07-26",
+      "appliedVia": "company-website",
+      "remote": true,
+      "country": "US",
+      "ats": "Greenhouse",
+      "tailoredCvPath": "tailored/KRISH_PAVULURI_CV_topstep-sr-sdet.pdf",
+      "compensation": {
+        "postedRange": "$155,000-$190,000 USD + bonus",
+        "askedRange": "$155,000-$175,000 USD"
+      },
+      "notes": "US-remote real-time futures trading platform (TopstepX). AI-assisted test generation + TypeScript + React/C#.NET + WebSocket/real-time testing focus; band $155-190K. Greenhouse form (reCAPTCHA). Claude filled identity/CV/free-text (why-fit, CI/CD, TS proficiency, framework tooling, desired comp $155-175K USD, contractual=No); user completed the react-select dropdowns (incl. WebSocket / C#.NET / US work-eligibility), cleared reCAPTCHA, and submitted. Confirmed via Greenhouse /confirmation 'Thank you for applying' page. Note gap areas to expect in screening: WebSocket/real-time and C#/.NET backend depth.",
+      "status": "submitted",
+      "events": [
+        {
+          "date": "2026-07-26",
+          "type": "applied",
+          "detail": "Submitted via Greenhouse (user finished dropdowns + reCAPTCHA). Confirmed by /confirmation thank-you page."
+        }
+      ]
+    },
+    {
+      "id": "sprypoint-sr-sdet-2026-07-26",
+      "signature": "sprypoint|senior-sdet-software-development-engineer-in-test|remote-canada",
+      "company": "SpryPoint",
+      "title": "Senior SDET (Software Development Engineer in Test)",
+      "location": "Remote - Canada (also US-listed)",
+      "url": "https://www.linkedin.com/jobs/view/4444412480",
+      "appliedAt": "2026-07-26",
+      "appliedVia": "company-website",
+      "remote": true,
+      "country": "Canada",
+      "ats": "Lever",
+      "tailoredCvPath": "tailored/KRISH_PAVULURI_CV_sprypoint-sr-sdet.pdf",
+      "compensation": {
+        "askedRange": "$120,000-$140,000 CAD"
+      },
+      "notes": "Canadian utility SaaS (PEI-HQ) — applied as Canada-resident (Remote-Canada/Quebec/Eastern), work auth = authorized in Canada. Lever form with 4 required authenticity-screened essays (why-SpryPoint, framework-from-scratch, API+SQL, AI-tools-in-real-work) — Claude drafted honest answers from resume; user reviewed and submitted. Strong stack fit: Playwright/API/SQL/CI-CD/AI-assisted testing. Salary ask $120-140K CAD. Honesty attestation + He/Him. Confirmed via Lever /thanks URL.",
+      "status": "submitted",
+      "events": [
+        {
+          "date": "2026-07-26",
+          "type": "applied",
+          "detail": "Submitted via Lever with tailored CV + 4 essay answers. Confirmed by /thanks URL."
+        }
+      ]
+    },
+    {
+      "id": "marriott-ai-qe-architect-2026-08-07",
+      "signature": "marriott|ai-qe-architect|remote",
+      "company": "Marriott",
+      "title": "AI QE Architect (10-14 Yrs)",
+      "location": "Remote (unconfirmed - verify vs Bethesda/Charlotte hybrid)",
+      "url": null,
+      "appliedAt": null,
+      "appliedVia": "other",
+      "remote": true,
+      "country": "US",
+      "ats": null,
+      "tailoredCvPath": "tailored/KRISH_PAVULURI_CV_marriott-ai-qe-architect.pdf",
+      "compensation": {
+        "askedRange": null
+      },
+      "notes": "Inbound recruiter outreach from Amarnath Sharma (third-party IT recruiter); client disclosed as Marriott on follow-up. Outreach was a mass template - opened with 'your experience as an SDET Manager at G Adventures', which is not Krish's history. JD wants GenAI/agentic QE: LLMs, RAG, prompt engineering, vector DBs, LangChain/LangGraph/AutoGen/CrewAI or MCP; Playwright/Selenium, PyTest/RestAssured, JMeter/Locust; PyTorch/TensorFlow + model CI-CD eval; AWS/Azure/GCP; QE-AI strategy + mentoring. Strong fit: MCP + agentic pipeline, Playwright, Java/TypeScript/Python, GitHub Actions/Jenkins/Azure DevOps, AWS+Azure, RAG/embeddings/vector stores, prompt engineering, PyTest, JMeter/LoadRunner, 10+ yrs plus architect/mentoring track record. Gaps (deliberately not claimed on CV): LangChain/LangGraph/AutoGen/CrewAI, PyTorch/TensorFlow and model CI-CD evaluation, Locust, GCP. Domain: no travel/hospitality history - nearest parallel is Bell Canada consumer mobile (account/billing, high volume). BEFORE SENDING CV: confirm W2 vs C2C vs FTE, rate, which vendor holds the contract, and whether remote is genuine or hybrid to a Marriott hub. Related: see point32health-ai-test-automation-architect-2026-07-03 for a prior recruiter-routed AI QE architect req.",
+      "status": "lead",
+      "events": [
+        {
+          "date": "2026-08-07",
+          "type": "lead",
+          "detail": "Inbound recruiter email (Amarnath Sharma). Client identified as Marriott. Tailored CV generated at tailored/KRISH_PAVULURI_CV_marriott-ai-qe-architect.pdf; not yet sent, pending contract-terms clarification."
+        }
+      ]
+    },
+    {
+      "id": "absorb-sr-qa-2026-09-08",
+      "signature": "absorb-software|senior-qa-engineer|canada-remote",
+      "company": "Absorb Software",
+      "title": "Senior QA Engineer",
+      "location": "Remote CAN (Canada, remote)",
+      "url": "https://jobs.ashbyhq.com/absorblms/97c4bfb2-2d73-4cfb-9c18-bdb67a8ce011",
+      "appliedAt": "2026-09-08",
+      "appliedVia": "company-website",
+      "remote": true,
+      "country": "Canada",
+      "ats": "Ashby",
+      "tailoredCvPath": "tailored/KRISH_PAVULURI_CV_absorb-sr-qa.pdf",
+      "compensation": {
+        "askedRange": "$120,000 CAD (base salary expectation field)"
+      },
+      "role": {
+        "level": "senior",
+        "workMode": "remote",
+        "techStack": [
+          "playwright",
+          "typescript",
+          "claude-code",
+          "agentic-ai",
+          "ai-evals",
+          "cypress",
+          "selenium"
+        ],
+        "matchedKeywords": [
+          "Playwright",
+          "TypeScript",
+          "Claude Code",
+          "Agentic AI",
+          "Model Evaluation",
+          "Selenium",
+          "GitHub Copilot"
+        ]
+      },
+      "status": "applied",
+      "events": [
+        {
+          "date": "2026-09-08",
+          "type": "applied",
+          "detail": "Submitted via Ashby; positive confirmation 'Your application was successfully submitted.' Sourced on LinkedIn (job 4441091074), applied on company Ashby board. Answered the optional free-text 'Why are you interested in Spec-Driven Development?' with the agentic-pipeline / user-story-validation story."
+        }
+      ],
+      "notes": "Strongest JD match of the 2026-09-08 session: asks for Playwright + TypeScript + Claude Code + agentic workflows + AI evals + non-deterministic LLM testing, which maps directly onto Krish's Playwright MCP multi-agent pipeline and model-evaluation work. GAP TO PREP: they name Arize AX/Phoenix, LangSmith or Braintrust for AI observability - Krish has model evaluation and drift scoring but not those specific platforms; expect the question. Also names AI-DLC / spec-driven development as a methodology. Ashby quirk: .fill() did not register Full Name or Phone in React state and the first submit was rejected with 'Missing entry for required field'; fixed with the React-aware native value setter. Always verify Ashby state before submitting."
+    },
+    {
+      "id": "mindbridge-qa-test-automation-dev-2026-09-08",
+      "signature": "mindbridge|qa-test-automation-developer|canada-est-remote",
+      "company": "MindBridge",
+      "title": "QA & Test Automation Developer (Canada, EST, Remote)",
+      "location": "Canada, EST timezone, Remote (HQ Ottawa, ON)",
+      "url": "https://jobs.dayforcehcm.com/en-CA/mindbridge/CANDIDATEPORTAL/jobs/217",
+      "reqId": "Req #39",
+      "confirmationNumber": "mRrYQSkA",
+      "appliedAt": "2026-09-08",
+      "appliedVia": "company-website",
+      "remote": true,
+      "country": "Canada",
+      "ats": "Dayforce HCM (Ceridian)",
+      "tailoredCvPath": "tailored/KRISH_PAVULURI_CV_mindbridge-qa-dev.pdf",
+      "compensation": {
+        "askedRange": "$120,000 CAD (Desired Salary field)"
+      },
+      "role": {
+        "level": "senior",
+        "workMode": "remote",
+        "techStack": [
+          "typescript",
+          "javascript",
+          "python",
+          "agentic-ai",
+          "llm-testing",
+          "ci-cd",
+          "test-automation"
+        ],
+        "matchedKeywords": [
+          "Agentic AI",
+          "CI/CD",
+          "TypeScript",
+          "JavaScript",
+          "Python",
+          "Model Evaluation",
+          "Multi-Agent Orchestration",
+          "Prompt Engineering"
+        ]
+      },
+      "status": "applied",
+      "events": [
+        {
+          "date": "2026-09-08",
+          "type": "applied",
+          "detail": "Submitted via Dayforce guest flow ('Apply without an Account'). Confirmation number mRrYQSkA. Sourced on LinkedIn (job 4462448668). Screeners: work-authorized in Canada Yes; Bachelor's degree; desired salary $120,000 CAD; notice 2 weeks; accommodations No; prior MindBridge employee No; 8+ yrs QA; languages TypeScript/JavaScript/Python/Java; all 10 testing approaches; CI-CD integration Yes; complex failure investigation Yes; AI-assisted dev tools Yes."
+        }
+      ],
+      "notes": "AI-powered financial risk/audit platform. JD is a near-twin of the Absorb req: agentic tools for test creation and failure triage, testing LLM-based and non-deterministic systems, defining quality thresholds and regression approaches for model behaviour. Strong alignment with Krish's Playwright MCP agentic pipeline and model evaluation work. Company discloses it uses AI in screening with human review. Dayforce quirks: (1) 'Import Resume' auto-parsed the CV and OVERWROTE/CLEARED already-filled fields (wiped confirm-email, LinkedIn, address, postal; uppercased names to KRISH PAVULURI) - upload the resume FIRST, then fill text fields. (2) Phone is invalid until the separate country dialing-code combobox is set. (3) Ant Design checkboxes need re-query + delay between clicks or they silently fail to toggle."
+    },
+    {
+      "id": "seamlessmd-software-test-engineer-2026-09-08",
+      "signature": "seamlessmd|software-test-engineer|toronto-on-remote",
+      "company": "SeamlessMD",
+      "title": "Software Test Engineer",
+      "location": "Toronto, ON (Remote)",
+      "url": "https://seamlessmd.applytojobs.ca/quality+assurance/48207",
+      "appliedAt": null,
+      "appliedVia": null,
+      "remote": true,
+      "country": "Canada",
+      "ats": "applytojobs.ca",
+      "status": "skipped",
+      "events": [
+        {
+          "date": "2026-09-08",
+          "type": "seen"
+        },
+        {
+          "date": "2026-09-08",
+          "type": "skipped",
+          "detail": "Level mismatch. JD states 'early-career professionals with at least 2 years of Software Quality Assurance experience' and splits the work 70% manual / 30% automation (Cypress). Krish is 10+ yrs and an automation architect - would be a down-level, likely under the $120k CAD floor, and a probable overqualified screen-out."
+        }
+      ],
+      "notes": "Healthcare (digital patient care, EHR integrations with Epic/Cerner/MEDITECH). Automation stack is Cypress/Maestro, not Playwright/Appium. Revisit only if they post a senior or automation-lead req."
+    },
+    {
+      "id": "autodesk-sr-sdet-2026-09-08",
+      "signature": "autodesk|senior-software-developer-in-test-sdet-remote|vancouver-bc-remote",
+      "company": "Autodesk",
+      "title": "Senior Software Developer in Test (SDET), Remote",
+      "location": "Vancouver, BC (Remote) - Canada",
+      "url": "https://autodesk.wd1.myworkdayjobs.com/ext/job/amer---canada---british-columbia---vancouver---bentall-centre/senior-software-developer-in-test-sdet--remote_26wd100434-1",
+      "reqId": "26WD100434",
+      "appliedAt": null,
+      "appliedVia": "company-website",
+      "remote": true,
+      "country": "Canada",
+      "ats": "Workday",
+      "tailoredCvPath": "tailored/KRISH_PAVULURI_CV_autodesk-sr-sdet.pdf",
+      "compensation": {
+        "disclosedBand": "$84,000 - $123,200 CAD base + bonus/stock",
+        "askedRange": "$120,000 CAD"
+      },
+      "role": {
+        "level": "senior",
+        "workMode": "remote",
+        "techStack": [
+          "playwright",
+          "cypress",
+          "typescript",
+          "javascript",
+          "rest-assured",
+          "aws",
+          "ci-cd"
+        ],
+        "matchedKeywords": [
+          "Playwright",
+          "TypeScript",
+          "JavaScript",
+          "Rest-Assured",
+          "AWS",
+          "CI/CD"
+        ]
+      },
+      "status": "tailored",
+      "events": [
+        {
+          "date": "2026-09-08",
+          "type": "seen",
+          "detail": "Found via Indeed MCP connector (ca), not LinkedIn."
+        },
+        {
+          "date": "2026-09-08",
+          "type": "blocked-account-wall",
+          "detail": "Workday requires creating an account with a password as step 1 of 6 before any application data can be entered. Not completed - creating accounts/passwords on Krish's behalf is out of scope. Tailored CV is ready at tailored/KRISH_PAVULURI_CV_autodesk-sr-sdet.pdf; Krish needs to create the Workday account, then the remaining steps (My Information, My Experience, Application Questions, Voluntary Disclosures, Review) can be filled."
+        }
+      ],
+      "notes": "Strong fit: 6+ yrs required (Krish 10+), JavaScript/TypeScript, Playwright or Cypress, REST Assured API testing, CI/CD, microservices. TWO THINGS TO WEIGH: (1) Salary band tops out at $123,200 CAD, so the $120k ask sits right at the ceiling - little room and possibly a stretch for them. (2) Requires 'strong knowledge of AWS services' with hands-on AWS Lambda, S3, DynamoDB - Krish lists AWS and AWS Bedrock on the CV but those three specific services are not evidenced in any bullet; expect to be probed. Preferred-but-missing: interactive maps / GIS / geospatial / canvas UI testing. Note the posting says the role may require in-person onboarding and/or in-person ID verification - confirm that is compatible with Montreal-remote."
+    },
+    {
+      "id": "dutchvet-sdet-2026-09-08",
+      "signature": "dutch-vet|sdet-software-development-engineer-in-test|canada-remote",
+      "company": "Dutch Vet",
+      "title": "SDET (Software Development Engineer in Test)",
+      "location": "Canada (Remote)",
+      "url": "https://jobs.lever.co/dutch/75cb4d38-3baa-4d0c-980f-fbc4de44c999",
+      "appliedAt": null,
+      "appliedVia": "company-website",
+      "remote": true,
+      "country": "Canada",
+      "ats": "Lever",
+      "tailoredCvPath": "tailored/KRISH_PAVULURI_CV_dutchvet-sdet.pdf",
+      "compensation": {
+        "disclosedBand": "$85,000 - $110,000 CAD",
+        "askedRange": "$120,000 CAD"
+      },
+      "role": {
+        "level": "senior",
+        "workMode": "remote",
+        "techStack": [
+          "playwright",
+          "typescript",
+          "javascript",
+          "github-actions",
+          "appium",
+          "api-testing"
+        ],
+        "matchedKeywords": [
+          "Playwright",
+          "Appium",
+          "TypeScript",
+          "JavaScript",
+          "GitHub Actions",
+          "CI/CD"
+        ]
+      },
+      "status": "tailored",
+      "events": [
+        {
+          "date": "2026-09-08",
+          "type": "seen",
+          "detail": "Sourced on LinkedIn (job 4454334073)."
+        },
+        {
+          "date": "2026-09-08",
+          "type": "form-prepared-awaiting-user",
+          "detail": "Lever form filled and left open: identity, Montreal QC location, He/him, resume attached, located-in-Canada Yes, 5+ yrs automated suites, TypeScript/Python Daily, framework Built-from-scratch, production tools Playwright+Selenium+Appium (Cypress/Puppeteer correctly unchecked), and drafted long-form answers to the salary-range, Playwright-auto-waiting, and refuse-to-automate questions. NOT SUBMITTED - two required fields need Krish personally: (1) a link to test code or a PR he wrote plus two sentences on real review feedback he received; (2) a 60-second Loom recording on approaching coverage for an unfamiliar flow. Cannot be fabricated."
+        }
+      ],
+      "notes": "Veterinary telemedicine. Technically one of the best matches in the Canada set: owns Playwright framework architecture (page objects, test data, CI), testability contract with devs (data-testid, API hooks), testing pyramid discipline, tiered CI (smoke/nightly/weekly), Appium a plus. SALARY GAP: posted $85-110k CAD vs Krish's $120k ask - per his 2026-09-08 decision, applying anyway and stating $120k transparently in the salary question rather than anchoring down. This employer screens hard with free-text and a video, so the application quality bar is high - the drafted answers should be reviewed in his own voice before submitting."
+    },
+    {
+      "id": "ttec-digital-sr-qa-sdet-2026-09-08",
+      "signature": "ttec-digital|senior-qa-sdet-engineer|toronto-on-remote",
+      "company": "TTEC Digital",
+      "title": "Senior QA / SDET Engineer",
+      "location": "Toronto, ON (Fully Remote)",
+      "url": "https://www.linkedin.com/jobs/view/4449698760/",
+      "appliedAt": "2026-09-08",
+      "appliedVia": "linkedin",
+      "remote": true,
+      "country": "Canada",
+      "ats": "LinkedIn Easy Apply (powered by Lever)",
+      "tailoredCvPath": "tailored/KRISH_PAVULURI_CV_ttec-sr-qa-sdet.pdf",
+      "compensation": {
+        "disclosedBand": null,
+        "askedRange": null
+      },
+      "role": {
+        "level": "senior",
+        "workMode": "remote",
+        "techStack": [
+          "agentic-ai",
+          "llm",
+          "rag",
+          "test-automation",
+          "sdet",
+          "ci-cd",
+          "distributed-systems"
+        ],
+        "matchedKeywords": [
+          "Agentic AI",
+          "RAG",
+          "Model Evaluation",
+          "OpenAI / LLMs",
+          "Prompt Engineering",
+          "CI/CD"
+        ]
+      },
+      "status": "applied",
+      "events": [
+        {
+          "date": "2026-09-08",
+          "type": "applied",
+          "detail": "Submitted via LinkedIn Easy Apply. Confirmed in LinkedIn Job Tracker: 'Applied 1m ago'. Note the job page itself showed no Applied badge immediately after submit - the tracker at linkedin.com/jobs-tracker/?stage=applied was the reliable confirmation. Consented to being contacted about future roles for 1 year; 'Follow TTEC Digital' checkbox unchecked per standing rule. No salary question asked."
+        }
+      ],
+      "notes": "Innovation group inside TTEC (NASDAQ: TTEC) building AI CX tools - automated QA, conversational analytics, knowledge assist, agentic automation. JD is DNA/culture-led rather than a checklist: wants 'AI-native' engineers fluent in LLMs, SLMs, RAG, knowledge graphs, agents, training and eval, plus distributed-systems literacy. Very strong alignment with Krish's agentic pipeline and model-evaluation work. No salary disclosed - the $120k CAD ask was never requested, so it stays open for the recruiter call. TTEC states it uses AI tools to screen applications."
+    },
+    {
+      "id": "blackpoint-cyber-swe-in-test-2026-09-08",
+      "signature": "blackpoint-cyber|software-engineer-in-test|canada-remote",
+      "company": "Blackpoint Cyber",
+      "title": "Software Engineer in Test",
+      "location": "Canada (Remote)",
+      "url": "https://jobs.ashbyhq.com/Blackpoint%20Cyber/d878fd8a-1456-4dac-b7ab-c35fc41ce3ff",
+      "appliedAt": null,
+      "appliedVia": null,
+      "remote": true,
+      "country": "Canada",
+      "ats": "Ashby",
+      "status": "skipped",
+      "events": [
+        {
+          "date": "2026-09-08",
+          "type": "seen"
+        },
+        {
+          "date": "2026-09-08",
+          "type": "skipped",
+          "detail": "Level mismatch. Requires only '2+ years of experience in software testing' and frames the work as executing 'under the guidance of senior engineers', 'escalating complex issues to senior engineers', and adopting 'best practices introduced by senior team members'. That is a junior/mid seat; Krish is 10+ yrs and a test architect."
+        }
+      ],
+      "notes": "Shame on fit otherwise - cybersecurity MDR/XDR (founded by ex-NSA/DoD, $190m Series C), stack is Playwright + TypeScript/Python + GitHub Actions + AWS/Azure/Docker/Kubernetes, and they explicitly want AI-powered testing tooling. Krish's Canadian Government Level A (Reliability) clearance would have been a differentiator here. WATCH THIS COMPANY for a senior/staff SDET req - strong domain and stack alignment."
+    },
+    {
+      "id": "quest-software-automation-dev-2026-09-08",
+      "signature": "quest-software|software-automation-developer|nova-scotia-remote",
+      "company": "Quest Software",
+      "title": "Software Automation Developer",
+      "location": "CA-NS-Remote (Nova Scotia, Canada, remote; team based in Halifax)",
+      "url": "https://careers-quest.icims.com/jobs/13597/software-automation-developer/job",
+      "appliedAt": null,
+      "appliedVia": "company-website",
+      "remote": true,
+      "country": "Canada",
+      "ats": "iCIMS",
+      "tailoredCvPath": "tailored/KRISH_PAVULURI_CV_quest-automation-dev.pdf",
+      "compensation": {
+        "disclosedBand": null,
+        "askedRange": "$120,000 CAD"
+      },
+      "role": {
+        "level": "mid-senior",
+        "workMode": "remote",
+        "techStack": [
+          "azure-devops",
+          "azure",
+          "test-automation",
+          "ai-coding-agents",
+          "active-directory",
+          "office-365",
+          "sql-server"
+        ],
+        "matchedKeywords": [
+          "Azure DevOps",
+          "Azure",
+          "Agentic AI",
+          "Claude Code",
+          "Azure OpenAI"
+        ]
+      },
+      "status": "tailored",
+      "events": [
+        {
+          "date": "2026-09-08",
+          "type": "seen",
+          "detail": "Sourced on LinkedIn (job 4460088548)."
+        },
+        {
+          "date": "2026-09-08",
+          "type": "blocked-account-wall",
+          "detail": "iCIMS Step 1 of 4 (Candidate Profile) requires 'Create a login' with Login, Password and Password (Re-enter), all mandatory. Not completed - will not set a password on Krish's behalf. Email + GDPR consent were accepted to reach the profile page; the hCaptcha on this portal is invisible/passive, not a challenge. Tailored CV ready. Krish must create the login, upload tailored/KRISH_PAVULURI_CV_quest-automation-dev.pdf, then complete steps 2-4 (Candidate Questions, EEO US-only, Portal Specific Forms)."
+        }
+      ],
+      "notes": "MIXED FIT - flag before investing more. Strong side: they explicitly want someone 'who has used AI coding agents in real software development work and can translate that experience into repeatable practices', pushing to automate testing with AI tools, plus ADO pipeline ownership and framework design. That is squarely Krish. Weak side: the Qualifications are heavily Microsoft infrastructure - Windows Server, Windows networking, virtualization (VMware/Hyper-V/Azure VMs), and working knowledge of Active Directory / Azure AD / Exchange / O365 / SharePoint / IIS / SQL Server / DNS. Krish's background is web/mobile/API in banking and telecom; he satisfies 'one or more' via SQL Server and Azure, but this is really a Windows/AD-domain automation role. Also note JD says the agile team is 'in Halifax' while the posting is NS-Remote - confirm Montreal-remote is acceptable."
+    },
+    {
+      "id": "kake-sr-qa-2026-09-08",
+      "signature": "kake|senior-qa-engineer-remote|toronto-on-remote",
+      "company": "Kake",
+      "title": "Senior QA Engineer - Remote",
+      "location": "Toronto, ON (Remote)",
+      "url": "https://www.linkedin.com/jobs/view/4449203463/",
+      "appliedAt": "2026-09-08",
+      "appliedVia": "linkedin",
+      "remote": true,
+      "country": "Canada",
+      "ats": "LinkedIn Easy Apply",
+      "tailoredCvPath": "tailored/KRISH_PAVULURI_CV_kake-sr-qa.pdf",
+      "compensation": {
+        "disclosedBand": "'Competitive pay in USD' - no figure given",
+        "askedRange": null
+      },
+      "employmentType": "Contract",
+      "role": {
+        "level": "senior",
+        "workMode": "remote",
+        "techStack": [
+          "playwright",
+          "cypress",
+          "selenium",
+          "webdriverio",
+          "ci-cd",
+          "api-testing",
+          "ai-generated-code-review"
+        ],
+        "matchedKeywords": [
+          "Playwright",
+          "Selenium",
+          "Claude Code",
+          "GitHub Copilot",
+          "TypeScript",
+          "JavaScript",
+          "Python",
+          "Java",
+          "CI/CD"
+        ]
+      },
+      "status": "applied",
+      "events": [
+        {
+          "date": "2026-09-08",
+          "type": "applied",
+          "detail": "Submitted via LinkedIn Easy Apply. Confirmed in LinkedIn Job Tracker: 'Applied just now'; applied count moved 106 -> 107. Screeners prefilled and verified accurate: English Professional, 10 yrs Software QA, 10 yrs Software Testing. 'Follow Kake' checkbox unchecked per standing rule. No salary question asked."
+        }
+      ],
+      "notes": "CAVEAT - this is a talent-marketplace model, not a direct employer. Kake describes itself as 'a people-first global community of senior engineers, 45,000+ engineers across 55+ countries' placing people at other companies; the end client is not disclosed in the posting. Role is CONTRACT, paid in USD, and the JD warns 'only shortlisted candidates will be contacted'. Per the aggregator rule, do not treat this as a known employer - establish the actual client, the rate, and the engagement terms on the first recruiter call before investing further. Krish's contract rate is $65-80 CAD/hr. Technical fit itself is good: 5+ yrs, Playwright/Cypress/Selenium, CI/CD, web+API+mobile+backend, and a nice-to-have for 'testing software developed with AI coding tools such as GitHub Copilot, Cursor, Claude' plus 'validate AI-generated code', which is directly Krish's territory."
+    },
+    {
+      "id": "magnet-forensics-sr-sdet-2026-09-08",
+      "signature": "magnet-forensics|senior-software-development-engineer-in-test|waterloo-toronto-ottawa-hybrid",
+      "company": "Magnet Forensics",
+      "title": "Senior Software Development Engineer in Test",
+      "location": "Waterloo / Toronto / Ottawa, ON - HYBRID",
+      "url": "https://to.indeed.com/aak678vf2brs",
+      "appliedAt": null,
+      "appliedVia": null,
+      "remote": false,
+      "country": "Canada",
+      "ats": "Lever (Magnet careers)",
+      "tailoredCvPath": "tailored/KRISH_PAVULURI_CV_magnet-sr-sdet.pdf",
+      "compensation": {
+        "disclosedBand": "$125,000 - $175,000 CAD"
+      },
+      "status": "skipped",
+      "events": [
+        {
+          "date": "2026-09-08",
+          "type": "seen",
+          "detail": "Found via Indeed MCP connector."
+        },
+        {
+          "date": "2026-09-08",
+          "type": "skipped",
+          "detail": "Posting is explicitly Hybrid. Per Krish's standing rule set 2026-09-08 - 'if someone explicitly mentions hybrid, don't apply' - not submitted. CV was already tailored before the rule was given and is kept at tailored/KRISH_PAVULURI_CV_magnet-sr-sdet.pdf in case he reverses."
+        }
+      ],
+      "notes": "PAINFUL SKIP - this was the best-paying and arguably best-fitting role of the 2026-09-08 session. $125-175k CAD (above the $120k ask), 5+ yrs, architecting test frameworks and testing SDKs, CI/CD and IaC, explicitly 'next-generation AI-powered products' with a nice-to-have for 'testing LLM-powered applications and agentic systems'. Digital forensics / national security domain means Krish's Canadian Government Level A (Reliability) clearance is directly relevant. Blocker is location only: listed Hybrid across Waterloo/Toronto/Ottawa, 'if you're within a comfortable travel distance to one of our offices, you'll occasionally join us in person, typically weekly to monthly' - Montreal is not. NOTE Krish already applied to a different Magnet req on 2026-05-11 (SDET, via Lever, status submitted). If Magnet ever posts a fully-remote senior req, this is a top-priority target."
+    },
+    {
+      "id": "ebizcharge-sdet-2026-09-08",
+      "signature": "ebizcharge|software-development-engineer-in-test|canada-remote",
+      "company": "EBizCharge",
+      "title": "Software Development Engineer in Test",
+      "location": "Canada (Remote)",
+      "url": "https://www.linkedin.com/jobs/view/4402708141/",
+      "appliedAt": "~2026-05",
+      "appliedVia": "linkedin",
+      "remote": true,
+      "country": "Canada",
+      "ats": "LinkedIn Easy Apply",
+      "status": "applied",
+      "events": [
+        {
+          "date": "2026-09-08",
+          "type": "duplicate-detected",
+          "detail": "Queued as a new target, then found LinkedIn showing 'Application status: Application submitted - 4 months ago' (approx May 2026). Krish had already applied outside these sessions; the local tracker had no record. Not re-applied. Backfilled here so future dedupe catches it."
+        }
+      ],
+      "notes": "Payment gateway SDET, PCI-compliant financial transaction systems, integrated with QuickBooks/Sage/SAP B1/Dynamics/NetSuite. Stack matches Krish closely: Selenium, Playwright, RestAssured, Postman, GitHub Actions/Jenkins/Azure DevOps, SQL, JMeter/k6, AWS/Azure, Docker/Kubernetes, and 'experience testing financial systems' which his UFCU and ATB Financial banking work covers. Confirmed remote, no hybrid, no French. Worth a follow-up on the existing 4-month-old application rather than a new one. PROCESS LESSON: check the LinkedIn 'Application status' block on the job page BEFORE analysing the JD or tailoring a CV - it would have saved the whole evaluation here."
+    },
+    {
+      "id": "taiv-sr-qa-automation-2026-09-08",
+      "signature": "taiv|senior-qa-and-automation-developer|winnipeg-mb",
+      "company": "Taiv",
+      "title": "Senior QA and Automation Developer",
+      "location": "Winnipeg, MB - HYBRID / in person",
+      "url": "https://to.indeed.com/aadzz9xntbl2",
+      "appliedAt": null,
+      "appliedVia": null,
+      "remote": false,
+      "country": "Canada",
+      "ats": null,
+      "compensation": {
+        "disclosedBand": "$80,000 - $130,000 CAD + stock options"
+      },
+      "status": "skipped",
+      "events": [
+        {
+          "date": "2026-09-08",
+          "type": "seen",
+          "detail": "Found via Indeed MCP connector."
+        },
+        {
+          "date": "2026-09-08",
+          "type": "skipped",
+          "detail": "Location. Listing states 'Hybrid work model', 'Ability to commute: can reliably commute to the office (required)' and 'Work Location: In person', in Winnipeg MB. Fails the explicit-hybrid rule and the remote-only filter outright."
+        }
+      ],
+      "notes": "Strong technical match wasted on geography: Y Combinator-backed startup, role owns testing across firmware, detection models, TypeScript/React web apps and Android; wants someone who has STOOD UP a test suite from scratch rather than maintained one, fluent in Playwright and Maestro, 5+ yrs, reporting to the CTO. Band $80-130k + options straddles the $120k ask. Only viable if Taiv ever opens it to remote."
+    },
+    {
+      "id": "altinity-clickhouse-sdet-2026-09-08",
+      "signature": "altinity|automation-python-clickhouse-qa-engineer-sdet-security-focus|remote",
+      "company": "Altinity",
+      "title": "Automation (Python) ClickHouse QA Engineer / SDET, Security Focus",
+      "location": "Remote (100% remote, work anywhere with work permits)",
+      "url": "https://altinity.careers-page.com/jobs/02b66469-893e-4f49-971b-dc6e3c57f89b",
+      "appliedAt": null,
+      "appliedVia": null,
+      "remote": true,
+      "country": "Remote/global",
+      "ats": "careers-page.com",
+      "compensation": {
+        "disclosedBand": "$60,000 - $100,000 per year"
+      },
+      "status": "skipped",
+      "events": [
+        {
+          "date": "2026-09-08",
+          "type": "seen",
+          "detail": "Found via Indeed MCP connector."
+        },
+        {
+          "date": "2026-09-08",
+          "type": "skipped",
+          "detail": "Two blockers. (1) Comp: $60,000-$100,000/yr, materially below the $120k CAD ask even at the top of band. (2) Skills: requires 'excellent knowledge of Python, C++ and bash scripting' - C++ is not on Krish's CV and cannot be claimed. Also leans hard on DBMS/OS-level and security testing (CVE triage, Grype/Trivy, RBAC, OAuth, TLS, FIPS) plus Kubernetes, which is outside his web/mobile/API profile."
+        }
+      ],
+      "notes": "Genuinely remote and open-source-friendly, and the AI angle is real ('running AI-assisted security scans', 'using AI daily but able to show core technical skills without it'). Revisit only if Krish picks up C++ or if Altinity posts a Python-only req at a higher band. Note they warn test code is publicly visible and interviews must be passed without AI assistance."
+    },
+    {
+      "id": "wealthsimple-staff-production-eng-2026-09-08",
+      "signature": "wealthsimple|staff-software-developer-production-engineering|canada-remote",
+      "company": "Wealthsimple",
+      "title": "Staff Software Developer, Production Engineering",
+      "location": "Canada (Remote)",
+      "url": "https://www.linkedin.com/jobs/view/4430040151/",
+      "appliedAt": null,
+      "appliedVia": null,
+      "remote": true,
+      "country": "Canada",
+      "ats": null,
+      "status": "skipped",
+      "events": [
+        {
+          "date": "2026-09-08",
+          "type": "seen"
+        },
+        {
+          "date": "2026-09-08",
+          "type": "skipped",
+          "detail": "Role scope, not location or level. This is site-reliability / production engineering - incident prevention, guardrails and engineering standards, time-to-mitigation tooling, 99.9% uptime and error-rate targets - not test automation or QA. Krish's profile says to filter out infra/SRE roles that do not touch test execution or container pipelines. He would be measured against SRE-native candidates on incident response rather than on test architecture."
+        }
+      ],
+      "notes": "Passes every hard filter (Canada, fully remote, no hybrid, no French, Staff level at a strong company - 4M+ Canadians, $155B AUA) and there is one genuinely adjacent hook: they are building an in-house AI-assisted incident response product, which touches Krish's agentic/LLM work. If he ever wants to move toward platform/reliability rather than QA, this is the kind of req to revisit - but it is a career pivot, not a lateral move."
     }
   ]
 }
