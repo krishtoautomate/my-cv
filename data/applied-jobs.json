@@ -4,8 +4,9 @@
     "horizonDays": 10,
     "callsTarget": 10,
     "interviewsTarget": 10,
-    "startedAt": "2026-05-09",
-    "endsAt": "2026-05-19"
+    "startedAt": "2026-09-08",
+    "endsAt": "2026-09-18",
+    "note": "Sprint restarted 2026-09-08; the previous window (2026-05-09 to 2026-05-19) had lapsed. Counters derive from events[].type: 'recruiter-call' toward callsTarget; 'technical-interview' / 'onsite' / 'interview-scheduled' toward interviewsTarget. CONTEXT WORTH ACTING ON: LinkedIn's own tracker read 107 applied / 0 interviews on 2026-09-08. Application volume is not the bottleneck - the CV rebuild and the Indeed profile refresh that day addressed two plausible upstream causes. If the next batch also goes quiet, investigate what happens to applications after submission rather than sending more."
   },
   "jobs": [
     {
