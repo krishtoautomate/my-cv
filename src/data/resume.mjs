@@ -46,19 +46,19 @@ export const skillGroups = [
       'Agentic AI', 'Multi-Agent Orchestration', 'MCP', 'Prompt Engineering',
       'RAG', 'Embedding Pipelines', 'Vector Databases', 'Model Evaluation',
       'OpenAI / LLMs', 'Ollama', 'HuggingFace Transformers', 'Claude Code',
-      'GitHub Copilot', 'LangChain', 'LangGraph', 'AutoGen', 'CrewAI',
+      'GitHub Copilot',
     ],
   },
   {
     label: 'ML & Governance',
     items: [
-      'PyTorch', 'TensorFlow', 'NLTK', 'BART', 'OpenCV', 'Scikit-Learn',
+      'PyTorch', 'TensorFlow', 'NLTK', 'BART', 'OpenCV',
       'MLOps / Model CI/CD', 'AI Governance & Compliance',
     ],
   },
   {
     label: 'Performance',
-    items: ['JMeter', 'k6', 'LoadRunner', 'Locust'],
+    items: ['JMeter', 'k6', 'LoadRunner'],
   },
   {
     label: 'CI/CD & Cloud',
