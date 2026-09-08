@@ -1203,6 +1203,54 @@
         }
       ],
       "notes": "Globally remote game co-development studio; partners include Epic, Xbox, Meta, Riot, Obsidian, Gearbox. Passes location filters (remote, Montreal, no hybrid, no French) but fails on domain and scope. Only revisit if they post an automation/SDET req."
+    },
+    {
+      "id": "nexaminds-principal-backend-qa-ai-2026-09-08",
+      "signature": "nexaminds|principal-backend-qa-engineer-ai|canada-remote",
+      "company": "Nexaminds",
+      "title": "Principal Backend QA Engineer (AI)",
+      "location": "Canada (Remote)",
+      "url": "https://ca.indeed.com/viewjob?jk=26c998fde7bc3336",
+      "appliedAt": "2026-09-08",
+      "appliedVia": "indeed",
+      "remote": true,
+      "country": "Canada",
+      "ats": "Indeed Apply (smartapply.indeed.com)",
+      "tailoredCvPath": "tailored/KRISH_PAVULURI_CV_nexaminds-backend-qa-ai.pdf",
+      "compensation": {
+        "disclosedBand": null,
+        "askedRange": "$13,000 USD/month gross (~$156k USD/yr, from the confirmed $75-80 USD/hr anchor)"
+      },
+      "role": {
+        "level": "principal",
+        "workMode": "remote",
+        "techStack": [
+          "api-automation",
+          "karate",
+          "postman",
+          "llm-as-a-judge",
+          "ai-agent-validation",
+          "chatbot-testing",
+          "microservices"
+        ],
+        "matchedKeywords": [
+          "Model Evaluation",
+          "Postman",
+          "Agentic AI",
+          "Multi-Agent Orchestration",
+          "Claude Code",
+          "MLOps / Model CI/CD"
+        ]
+      },
+      "status": "applied",
+      "events": [
+        {
+          "date": "2026-09-08",
+          "type": "applied",
+          "detail": "Submitted via Indeed Apply after Krish logged in to indeed.ca; confirmed by 'Your application has been submitted' post-apply page. First application to use the refreshed Indeed profile resume (2-page CV, 55 skills). Screeners: LinkedIn URL provided; Canadian citizen/PR Yes; currently located in Canada Yes; gross monthly salary expectation 13000 USD - Krish's explicit choice between the CAD-converted (~$7.5k) and US-rate (~$13k) anchors, taking the US rate since the employer pays in USD."
+        }
+      ],
+      "notes": "Unusually direct hit on the AI-testing differentiator: 'validating non-deterministic systems (such as AI agents and chatbots)' and 'evaluation concepts like LLM as a Judge' and response scoring - which is Krish's model-evaluation and chatbot-validation work (Bell/RobotActions NLTK+BART chatbot validation, agent output scoring for correctness and drift). GAP: they want API automation specifically via the KARATE FRAMEWORK, which is not on his CV - he has Rest-Assured, Requests, Postman and Playwright API testing. The JD softens this with 'without relying on rigid language-specific constraints', but expect Karate to come up. SALARY WATCH: $13k USD/month is the US-market anchor on a Canada-located role; if they are budgeting in Canadian terms this may screen high. Company is an AI consultancy - establish whether this is their own product or a client placement."
     }
   ]
 }

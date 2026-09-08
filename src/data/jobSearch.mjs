@@ -9,6 +9,13 @@ export const searchKeywords = [
   'ai automation',
 ];
 
+// Split sourcing roughly 50/50 between LinkedIn and Indeed (indeed.ca).
+// Krish's instruction 2026-09-08: do not spend the whole session on one
+// board. The two surface genuinely different inventory - Coursera and
+// Fiscal.ai, the two best-paid finds of that session, appeared only on
+// Indeed and never on LinkedIn.
+export const boardSplit = { linkedin: 0.5, indeed: 0.5 };
+
 // LinkedIn geo IDs and Indeed base hosts for each target country.
 // Canada only as of 2026-09-08 — Krish's primary focus. The US entry is
 // kept but commented out rather than deleted, since he is TN-eligible and
