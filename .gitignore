@@ -67,3 +67,10 @@ yarn-error.log*
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+tailored/
+
+# Playwright MCP session output (page snapshots, console logs) and the
+# ad-hoc form screenshots/snapshots taken while filling applications.
+.playwright-mcp/
+*-form.png
+*-presubmit*.yml

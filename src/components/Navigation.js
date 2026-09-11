@@ -40,11 +40,13 @@ const Navigation = () => {
     setAnchorEl(null);
     setGenerating(true);
     try {
-      const [{ pdf }, { default: CVDocument }] = await Promise.all([
+      const [{ pdf }, { default: CVDocument }, { registerInter }] = await Promise.all([
         import('@react-pdf/renderer'),
         import('../cv/CVDocument'),
+        import('../cv/registerFonts'),
       ]);
-      const blob = await pdf(<CVDocument />).toBlob();
+      const fontFamily = registerInter();
+      const blob = await pdf(<CVDocument fontFamily={fontFamily} />).toBlob();
       triggerDownload(blob, 'KRISH_PAVULURI_CV.pdf');
     } catch (err) {
       console.error('PDF generation failed', err);
