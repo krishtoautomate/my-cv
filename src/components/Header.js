@@ -78,7 +78,7 @@ const Header = () => {
           transition={{ duration: 0.6, delay: 0.15 }}
         >
           <Typography variant="h6" sx={{ color: 'text.secondary', mb: 2.5, fontWeight: 500 }}>
-            QA Automation Engineer · Test Architect · AI-Assisted Automation
+            SDET · Test Automation Architect · Playwright, Selenium & Appium · AI-Driven Automation
           </Typography>
         </motion.div>
 
@@ -94,7 +94,7 @@ const Header = () => {
             {[
               <Chip key="loc" icon={<LocationOn />} label="Montreal, QC" size="small" variant="outlined" />,
               <Chip key="yrs" label="10+ years experience" size="small" color="primary" variant="outlined" />,
-              <Chip key="stk" label="Playwright · TestNG · Cucumber" size="small" variant="outlined" />,
+              <Chip key="stk" label="Banking · Telecom · Rail" size="small" variant="outlined" />,
             ].map((c, i) => (
               <motion.div
                 key={i}

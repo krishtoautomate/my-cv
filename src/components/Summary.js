@@ -27,20 +27,27 @@ const Summary = () => {
           }}
         >
           <Typography variant="body1" paragraph>
-            Software Quality Assurance professional with 10+ years of experience testing native and
-            React Native iOS and Android apps on real devices, emulators, and simulators, plus mobile
-            web and hybrid flows with Playwright. Designs scalable automation frameworks with TestNG,
-            Cucumber, and Playwright Test, validates REST and SOAP services with Rest-Assured and
-            Playwright's built-in API testing, and ships rich Extent / Allure / Playwright HTML
-            reporting wired into Jira and Slack. Configures Jenkins, GitLab CI, and GitHub Actions
-            pipelines to run Selenium, Appium, and Playwright suites as part of continuous testing.
+            SDET and Test Automation Architect with 10+ years in QA automation and test architecture,
+            including 3+ years defining AI quality engineering strategy and platform architecture for
+            enterprise test automation. Designs scalable frameworks in Python (PyTest) and Java (TestNG,
+            Cucumber) driving Playwright, Selenium, and Appium across native and React Native iOS/Android
+            apps on real devices, emulators, and simulators, plus mobile web and hybrid flows. Validates
+            REST and SOAP services with Rest-Assured, Requests, and Playwright's built-in API testing;
+            runs performance engineering with JMeter, k6, and LoadRunner; and ships Extent / Allure /
+            Playwright HTML reporting wired into Jira and Slack. Configures Jenkins, GitLab CI, GitHub
+            Actions, and Azure DevOps pipelines for continuous testing across regulated banking, telecom,
+            and rail platforms.
           </Typography>
           <Typography variant="body1">
-            Hands-on with AI-assisted automation: implementing AI services through containerized APIs,
-            building and testing AI chatbot integrations, and using LLMs to accelerate test design,
-            triage, and self-healing locators. Delivers and maintains regression suites at 90%+ test
-            coverage with strong pass rates, treating tests as production code — kept up to date with
-            the app to keep false fails low and trust in CI high.
+            Hands-on with AI, LLMs, and agentic systems: builds multi-agent pipelines where custom agents
+            validate user stories, generate test steps, and execute them live through Playwright MCP —
+            capturing locators during the run to auto-generate page objects and step definitions, then
+            closing the loop with reviewer agents that evaluate the generated code, apply fixes, and open
+            pull requests. Applies prompt engineering, embedding pipelines, and RAG retrieval over vector
+            stores to ground agents in product, spec, and test context, and runs model evaluation to score
+            agent and LLM output for correctness, regression, and drift before it reaches CI. Delivers
+            regression suites at 90%+ coverage with strong pass rates, treating tests as production code to
+            keep false fails low and trust in CI high.
           </Typography>
         </Paper>
       </Box>
