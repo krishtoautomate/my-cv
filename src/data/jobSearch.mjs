@@ -37,6 +37,42 @@ export const filters = {
   skipFrenchRequired: true,
   postedWithinDays: 7,
   excludeReposts: true, // dedupe against data/applied-jobs.json signatures
+
+  // Compensation floor. Krish, 2026-09-09: "60-75k is very juniour level".
+  // A disclosed band whose TOP is at or below ~100k CAD is a junior/analyst
+  // req regardless of how the title reads, and is a hard skip - do not spend
+  // a tailored CV or an Easy Apply on it. Two on 2026-09-09 were caught by
+  // this: JD Power "QA Automation Analyst" (60-75k, P2/Analyst II) and
+  // LeverageTek (60-70k), both otherwise clean technical matches.
+  //
+  // This is NOT the same as the sub-band rule. Applying anyway is right when
+  // a band brackets or approaches the ask (Dutch Vet 85-110k, ABC Fitness
+  // 95-100k) - state 120k and log the gap. It is wrong when the band is
+  // roughly half the ask, because that signals the seniority of the role,
+  // not just its budget.
+  // Reinforced 2026-09-10: Krish declined HCLTech at a flat $85,000 CAD -
+  // "No hcl, 85k is very low" - despite one of the strongest JDs of the week
+  // (GraphQL contract testing, GitLab CI quality gates, enterprise framework
+  // architecture, LLMs in QE). $85k is 71% of the ask and is firmly below the
+  // line, not borderline. He has now rejected the $60-75k tier and the $85k
+  // tier in the same week, so do not offer exceptions to this floor.
+  minSalaryTopCAD: 100000,
+  // Equivalent contract floor: below ~$60 CAD/hour is the same signal.
+  minHourlyCAD: 60,
+};
+
+// Companies Krish has told me not to apply to, whatever the posting says.
+// No reason required and none recorded - treat as absolute. Check this list
+// before evaluating a posting, not after tailoring.
+export const excludeCompanies = [
+  'Aequilibrium',   // 2026-09-10
+  'GoMaterials',    // 2026-09-10
+];
+
+export const isExcludedCompany = (company) => {
+  const norm = (s) => (s || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+  const c = norm(company);
+  return excludeCompanies.some((x) => c.includes(norm(x)));
 };
 
 // LinkedIn search URL. f_WT=2 = Remote, f_TPR=r604800 = past week.

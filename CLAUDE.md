@@ -78,6 +78,7 @@ Encoded in `src/data/jobSearch.mjs` → `filters`. Applying these late wastes a 
 2. **Explicit "hybrid" → skip**, even when the in-office clause is conditional and even when the role is the best of the batch. This cost a $125–175k Magnet Forensics req.
 3. **French required → skip.** He is not bilingual. French "as an asset" is fine. French-language job titles are the tell.
 4. **Down-level → skip.** ~2-years-experience reqs, or work framed as executing "under the guidance of senior engineers", read as overqualified auto-rejects for a 10+ year architect.
+5. **Band topping out at or below ~$100k CAD → skip.** Krish, 2026-09-09: *"60-75k is very juniour level"*. A disclosed band around $60–75k is a junior/analyst req whatever the title says — the number tells you the seniority, not just the budget. Encoded as `filters.minSalaryTopCAD` (100000) and `filters.minHourlyCAD` (60). Distinguish this from the sub-band rule below: apply anyway when the band *approaches* the ask ($85–110k, $95–100k) and state $120k; skip when it is roughly half.
 
 ### Compensation
 
