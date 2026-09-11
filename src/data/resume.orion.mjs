@@ -26,7 +26,7 @@ const orion = {
   title: 'Senior SDET / Playwright Automation Engineer',
   duration: 'August 2025 – Present',
   summary:
-    'Playwright and BDD automation with AI-assisted authoring for JSI Telecom platforms, delivered in-sprint with TDD, reported through Allure, and run from GitHub Actions — alongside a DevOps remit across GitHub Actions, Jenkins, Docker, and AWS IdP.',
+    'Playwright and BDD automation with AI-assisted authoring for JSI Telecom platforms, delivered in-sprint with TDD, reported through Allure, and executed in Docker containers targeted by Helm charts from GitHub Actions and Jenkins build and deploy pipelines.',
   tags: ['telecom', 'web', 'playwright', 'bdd', 'tdd', 'ai', 'devops', 'agile', 'in-sprint'],
   points: [
     b('Built Playwright automation with a BDD layer, turning user stories into executable scenarios the whole team could read.',
@@ -39,10 +39,10 @@ const orion = {
       'allure', 'reporting', 'observability', 'metrics', 'stakeholders'),
     b('Ran regression on every push through GitHub Actions, gating releases with automated quality checks.',
       'github-actions', 'ci-cd', 'regression', 'quality-gates', 'continuous-testing'),
-    b('Doubled as DevOps: GitHub Actions and Jenkins pipelines, Docker-containerised test execution, and AWS IdP integration for authenticated environments.',
-      'devops', 'github-actions', 'jenkins', 'docker', 'containers', 'aws', 'idp', 'sso', 'iam', 'pipelines', 'infrastructure'),
+    b('Used Helm charts to point builds at Docker containers and run the Playwright suites inside them, with GitHub Actions and Jenkins pipelines handling build and deploy and AWS IdP covering authenticated environments.',
+      'devops', 'helm', 'kubernetes', 'docker', 'containers', 'github-actions', 'jenkins', 'ci-cd', 'deployment', 'aws', 'idp', 'pipelines', 'infrastructure'),
   ],
-  stack: ['Playwright', 'BDD/Cucumber', 'TypeScript', 'Allure', 'GitHub Actions', 'Jenkins', 'Docker', 'AWS IdP', 'Claude Code', 'Playwright MCP'],
+  stack: ['Playwright', 'BDD/Cucumber', 'TypeScript', 'Allure', 'GitHub Actions', 'Jenkins', 'Docker', 'Helm', 'AWS IdP', 'Claude Code', 'Playwright MCP'],
 };
 
 // index 0 is replaced by the Orion role; index 1 is extended to meet its start.
