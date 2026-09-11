@@ -64,7 +64,7 @@ export const skillGroups = [
     label: 'CI/CD & Cloud',
     items: [
       'Jenkins', 'GitHub Actions', 'GitLab CI', 'Azure DevOps', 'Docker',
-      'Ansible', 'Maven', 'Gradle', 'CI/CD', 'AWS', 'Azure', 'GCP',
+      'Helm', 'Ansible', 'Maven', 'Gradle', 'CI/CD', 'AWS', 'Azure', 'GCP',
       'Azure OpenAI', 'AWS Bedrock', 'Vertex AI',
     ],
   },
