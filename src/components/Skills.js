@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Box, Typography, Grid, Paper } from '@mui/material';
 import { Speed, Loop, Science, MenuBook, Hub, Build, Construction } from '@mui/icons-material';
 import { motion } from 'framer-motion';
+import { ACCENT, glassSx, spotlightSx, gradientRingSx, setSpotlight } from '../styles/effects';
 
 const skills = [
   { name: 'Playwright', img: 'https://playwright.dev/img/playwright-logo.svg' },
@@ -17,7 +18,7 @@ const skills = [
   { name: 'Maven', icon: <Build fontSize="large" />, gradient: 'linear-gradient(135deg, #d84315, #bf360c)' },
   { name: 'Gradle', icon: <Construction fontSize="large" />, gradient: 'linear-gradient(135deg, #00897b, #004d40)' },
   { name: 'Docker', img: 'https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png' },
-  { name: 'CI/CD', icon: <Loop fontSize="large" />, gradient: 'linear-gradient(135deg, #1565C0, #0d47a1)' },
+  { name: 'CI/CD', icon: <Loop fontSize="large" />, gradient: `linear-gradient(135deg, ${ACCENT.indigo}, #312e81)` },
   { name: 'OpenAI / LLMs', img: 'https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg' },
   { name: 'Java', img: 'https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg' },
   { name: 'TypeScript', img: 'https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg' },
@@ -26,7 +27,7 @@ const skills = [
   { name: 'React', img: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg' },
   { name: 'Jira', img: 'https://upload.wikimedia.org/wikipedia/commons/8/82/Jira_%28Software%29_logo.svg' },
   { name: 'Git', img: 'https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png' },
-  { name: 'LoadRunner', icon: <Speed fontSize="large" />, gradient: 'linear-gradient(135deg, #FF7043, #d84315)' },
+  { name: 'LoadRunner', icon: <Speed fontSize="large" />, gradient: `linear-gradient(135deg, ${ACCENT.pink}, #9d174d)` },
 ];
 
 const containerVariants = {
@@ -44,12 +45,13 @@ const SkillVisual = ({ skill }) => {
   if (skill.icon || failed) {
     return (
       <Box
+        className="skill-visual"
         sx={{
           width: 56,
           height: 56,
           mb: 1.25,
           mx: 'auto',
-          borderRadius: 2,
+          borderRadius: 2.5,
           background: skill.gradient || 'linear-gradient(135deg, #455a64, #263238)',
           color: '#fff',
           display: 'flex',
@@ -63,6 +65,7 @@ const SkillVisual = ({ skill }) => {
   }
   return (
     <img
+      className="skill-visual"
       src={skill.img}
       alt={skill.name}
       loading="lazy"
@@ -87,21 +90,34 @@ const Skills = () => {
         <Grid container spacing={2.5} justifyContent="center">
           {skills.map((skill) => (
             <Grid item xs={6} sm={4} md={3} lg={2.4} key={skill.name}>
-              <motion.div variants={itemVariants} whileHover={{ y: -6, scale: 1.03 }}>
+              <motion.div
+                variants={itemVariants}
+                whileHover={{ y: -6, scale: 1.02 }}
+                transition={{ type: 'spring', stiffness: 320, damping: 22 }}
+                style={{ height: '100%' }}
+              >
                 <Paper
                   elevation={0}
-                  sx={{
+                  onMouseMove={setSpotlight}
+                  sx={(theme) => ({
+                    ...glassSx(theme),
+                    ...spotlightSx(theme),
+                    ...gradientRingSx(theme),
                     p: 2,
                     textAlign: 'center',
                     height: '100%',
-                    border: '1px solid',
-                    borderColor: 'divider',
-                    transition: 'border-color 0.2s ease, box-shadow 0.2s ease',
-                    '&:hover': {
-                      borderColor: 'primary.main',
-                      boxShadow: 3,
+                    transition: 'box-shadow 0.25s ease',
+                    '& .skill-visual': {
+                      transition: 'filter 0.25s ease, transform 0.25s ease',
                     },
-                  }}
+                    '&:hover': {
+                      boxShadow: `0 12px 32px ${ACCENT.indigo}30`,
+                      '& .skill-visual': {
+                        filter: `drop-shadow(0 4px 14px ${ACCENT.indigo}55)`,
+                        transform: 'translateY(-2px)',
+                      },
+                    },
+                  })}
                 >
                   <SkillVisual skill={skill} />
                   <Typography variant="body2" sx={{ fontWeight: 600 }}>{skill.name}</Typography>

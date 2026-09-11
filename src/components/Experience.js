@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Box, Typography, Paper, Chip, Stack } from '@mui/material';
 import { Work } from '@mui/icons-material';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useSpring } from 'framer-motion';
+import { ACCENT, glassSx, spotlightSx, gradientRingSx, setSpotlight } from '../styles/effects';
 
 const experiences = [
   {
@@ -110,12 +111,22 @@ const experiences = [
 ];
 
 const Experience = () => {
+  const timelineRef = useRef(null);
+  // Scroll-linked progress: the gradient line fills as the timeline crosses
+  // the viewport, with a spring so it trails the scroll slightly.
+  const { scrollYProgress } = useScroll({
+    target: timelineRef,
+    offset: ['start 0.75', 'end 0.45'],
+  });
+  const scaleY = useSpring(scrollYProgress, { stiffness: 90, damping: 24, mass: 0.5 });
+
   return (
     <Box id="experience" sx={{ mb: 6 }}>
       <Typography variant="h6" gutterBottom sx={{ mb: 3 }}>
         Career Timeline
       </Typography>
-      <Box sx={{ position: 'relative', pl: { xs: 4.5, sm: 7 } }}>
+      <Box ref={timelineRef} sx={{ position: 'relative', pl: { xs: 4.5, sm: 7 } }}>
+        {/* base rail */}
         <Box
           sx={{
             position: 'absolute',
@@ -124,6 +135,23 @@ const Experience = () => {
             bottom: 12,
             width: '2px',
             bgcolor: 'divider',
+            borderRadius: 1,
+          }}
+        />
+        {/* scroll-linked gradient fill over the rail */}
+        <Box
+          component={motion.div}
+          style={{ scaleY }}
+          sx={{
+            position: 'absolute',
+            left: { xs: 14, sm: 22 },
+            top: 12,
+            bottom: 12,
+            width: '2px',
+            transformOrigin: 'top',
+            background: `linear-gradient(180deg, ${ACCENT.indigo}, ${ACCENT.violet}, ${ACCENT.pink})`,
+            boxShadow: `0 0 12px ${ACCENT.indigo}80`,
+            borderRadius: 1,
           }}
         />
         {experiences.map((exp, i) => (
@@ -141,7 +169,7 @@ const Experience = () => {
               whileInView={{ scale: 1, opacity: 1 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.4, delay: i * 0.05 + 0.2, type: 'spring', stiffness: 260, damping: 18 }}
-              sx={{
+              sx={(theme) => ({
                 position: 'absolute',
                 left: { xs: -32, sm: -47 },
                 top: 18,
@@ -149,14 +177,14 @@ const Experience = () => {
                 height: 32,
                 borderRadius: '50%',
                 bgcolor: 'background.paper',
-                border: '2px solid',
-                borderColor: 'primary.main',
+                border: '1px solid',
+                borderColor: theme.palette.mode === 'dark' ? 'rgba(139,147,255,0.5)' : 'rgba(79,70,229,0.4)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 color: 'primary.main',
-                boxShadow: 1,
-              }}
+                boxShadow: `0 0 0 4px ${theme.palette.mode === 'dark' ? 'rgba(99,102,241,0.12)' : 'rgba(99,102,241,0.10)'}, 0 0 16px ${ACCENT.indigo}40`,
+              })}
             >
               <Work fontSize="small" />
             </Box>
@@ -165,13 +193,15 @@ const Experience = () => {
               component={motion.div}
               whileHover={{ y: -3 }}
               transition={{ type: 'spring', stiffness: 300, damping: 22 }}
-              sx={{
+              onMouseMove={setSpotlight}
+              sx={(theme) => ({
+                ...glassSx(theme),
+                ...spotlightSx(theme),
+                ...gradientRingSx(theme),
                 p: { xs: 2.25, sm: 3 },
-                border: '1px solid',
-                borderColor: 'divider',
-                transition: 'border-color 0.2s ease, box-shadow 0.2s ease',
-                '&:hover': { borderColor: 'primary.main', boxShadow: 2 },
-              }}
+                transition: 'box-shadow 0.25s ease',
+                '&:hover': { boxShadow: `0 14px 40px ${ACCENT.indigo}26` },
+              })}
             >
               <Stack
                 direction={{ xs: 'column', sm: 'row' }}
@@ -186,21 +216,48 @@ const Experience = () => {
                     {exp.company} · {exp.location}
                   </Typography>
                 </Box>
-                <Chip label={exp.duration} size="small" color="primary" variant="outlined" />
+                <Chip
+                  label={exp.duration}
+                  size="small"
+                  sx={(theme) => ({
+                    color: 'primary.main',
+                    fontWeight: 600,
+                    backgroundColor: theme.palette.mode === 'dark' ? 'rgba(139,147,255,0.10)' : 'rgba(79,70,229,0.07)',
+                    border: '1px solid',
+                    borderColor: theme.palette.mode === 'dark' ? 'rgba(139,147,255,0.30)' : 'rgba(79,70,229,0.22)',
+                  })}
+                />
               </Stack>
               <Typography variant="body2" sx={{ mb: 2, color: 'text.secondary', fontStyle: 'italic' }}>
                 {exp.summary}
               </Typography>
               <Box component="ul" sx={{ pl: 2.5, m: 0, mb: 2 }}>
                 {exp.points.map((p, idx) => (
-                  <Typography component="li" key={idx} variant="body2" sx={{ mb: 0.75 }}>
+                  <Typography
+                    component="li"
+                    key={idx}
+                    variant="body2"
+                    sx={{ mb: 0.75, '&::marker': { color: 'primary.main' } }}
+                  >
                     {typeof p === 'string' ? p : p.text}
                   </Typography>
                 ))}
               </Box>
               <Stack direction="row" spacing={0.75} flexWrap="wrap" useFlexGap>
                 {exp.stack.map((t) => (
-                  <Chip key={t} label={t} size="small" sx={{ mb: 0.5 }} />
+                  <Chip
+                    key={t}
+                    label={t}
+                    size="small"
+                    sx={(theme) => ({
+                      mb: 0.5,
+                      backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.05)' : 'rgba(23,27,38,0.04)',
+                      border: '1px solid',
+                      borderColor: 'divider',
+                      transition: 'border-color 0.2s ease, color 0.2s ease',
+                      '&:hover': { borderColor: 'primary.main', color: 'primary.main' },
+                    })}
+                  />
                 ))}
               </Stack>
             </Paper>

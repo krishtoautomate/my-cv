@@ -2,18 +2,23 @@ import React from 'react';
 import { Document, Page, Text, View, StyleSheet, Link } from '@react-pdf/renderer';
 import * as canonical from '../data/resume.mjs';
 
-// Monochrome, rule-separated layout: uppercase letter-spaced headings,
-// a centred masthead, and a scannable highlights strip. Kept to a single
-// text column so ATS parsers read it in document order.
+// Two-tone layout inspired by the Novoresume "Cascade" family: a left-aligned
+// masthead, icon-chip section headers with a rule running to the right margin,
+// and a left date gutter on each role. Kept to a SINGLE TEXT COLUMN — the
+// gutter is a per-role row, not a page-wide sidebar, so ATS parsers still read
+// the document in order. Do not turn this into a real two-column layout:
+// parsers interleave the columns or drop the sidebar entirely.
 //
 // Fonts are registered by the entry point, not here — scripts/generate-pdf.tsx
 // registers Inter from disk, src/cv/registerFonts.js registers it from
 // public/fonts in the browser. Both then pass fontFamily="Inter". Without
 // registration the document falls back to Helvetica and still renders.
 const INK = '#1A1A1A';
+const NAVY = '#2E3A4B';      // icon chips + heading ink, as in the reference
 const MUTED = '#5C5C5C';
 const RULE = '#C9C9C9';
 const RULE_STRONG = '#8A8A8A';
+const GUTTER = 62;            // width of the left date column on each role
 
 const makeStyles = (ff) => {
   const bold = ff === 'Helvetica' ? 'Helvetica-Bold' : ff;
@@ -40,26 +45,25 @@ const makeStyles = (ff) => {
       borderColor: RULE,
     },
 
+    // Left-aligned, sentence case, near-zero tracking. This also removes the
+    // old letterSpacing risk outright: the name now extracts as one clean token.
     name: {
       fontFamily: bold,
       ...w(700),
-      fontSize: 21,
-      letterSpacing: 2.0,
-      textAlign: 'center',
-      textTransform: 'uppercase',
-      lineHeight: 1.15,
+      fontSize: 26,
+      letterSpacing: 0.2,
+      color: INK,
+      lineHeight: 1.1,
     },
     tagline: {
-      fontSize: 9.5,
+      fontSize: 11,
       color: MUTED,
-      textAlign: 'center',
-      marginTop: 6,
-      letterSpacing: 0.3,
+      marginTop: 3,
+      letterSpacing: 0.2,
     },
     contactRow: {
       fontSize: 8.5,
       color: MUTED,
-      textAlign: 'center',
       paddingVertical: 5,
     },
     link: { color: INK, textDecoration: 'none' },
@@ -88,14 +92,24 @@ const makeStyles = (ff) => {
       marginTop: 2,
     },
 
+    sectionHead: { flexDirection: 'row', alignItems: 'center', marginTop: 11, marginBottom: 7 },
+    chip: {
+      width: 13,
+      height: 13,
+      borderRadius: 2.5,
+      backgroundColor: NAVY,
+      marginRight: 7,
+    },
     heading: {
       fontFamily: bold,
       ...w(700),
-      fontSize: 10.5,
-      letterSpacing: 1.6,
+      fontSize: 11,
+      letterSpacing: 0.8,
       textTransform: 'uppercase',
-      marginBottom: 6,
+      color: NAVY,
+      marginRight: 8,
     },
+    headingRule: { flex: 1, borderBottomWidth: 1, borderBottomColor: NAVY, marginBottom: 2 },
     paragraph: { fontSize: 9, color: '#333333', marginBottom: 2 },
 
     skillRow: { flexDirection: 'row', marginBottom: 3.5 },
@@ -110,21 +124,22 @@ const makeStyles = (ff) => {
     },
     skillItems: { flex: 1, fontSize: 8.6, color: '#333333' },
 
-    jobBlock: { marginBottom: 8 },
-    jobHeader: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'baseline' },
-    jobCompany: { fontFamily: bold, ...w(600), fontSize: 9.5, letterSpacing: 0.3 },
-    jobDuration: { fontSize: 8.2, color: MUTED },
-    jobTitle: { fontSize: 9.5, marginTop: 1.5, color: INK },
+    jobBlock: { marginBottom: 9, flexDirection: 'row' },
+    jobGutter: { width: GUTTER, paddingRight: 8 },
+    jobMain: { flex: 1 },
+    jobDuration: { fontSize: 7.8, color: MUTED, lineHeight: 1.3 },
+    jobCompany: { fontFamily: bold, ...w(700), fontSize: 10, letterSpacing: 0.2, color: INK },
+    jobTitle: { fontFamily: italic, fontStyle: 'italic', fontSize: 8.8, marginTop: 1, color: MUTED },
     jobSummary: { fontFamily: italic, fontStyle: 'italic', fontSize: 8.3, color: MUTED, marginTop: 2, marginBottom: 3 },
     bulletRow: { flexDirection: 'row', marginBottom: 1.8 },
     bulletDot: { width: 8, fontSize: 8.6, color: RULE_STRONG },
     bulletText: { flex: 1, fontSize: 8.6, color: '#333333' },
     jobStack: { fontSize: 7.6, color: MUTED, marginTop: 3 },
 
-    eduRow: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'baseline' },
-    eduDegree: { fontFamily: bold, ...w(600), fontSize: 9.5 },
-    eduMeta: { fontSize: 8.6, color: MUTED, marginTop: 1 },
-    eduPeriod: { fontSize: 8.2, color: MUTED },
+    eduRow: { flexDirection: 'row' },
+    eduDegree: { fontFamily: bold, ...w(700), fontSize: 10 },
+    eduMeta: { fontFamily: italic, fontStyle: 'italic', fontSize: 8.8, color: MUTED, marginTop: 1 },
+    eduPeriod: { fontSize: 7.8, color: MUTED },
   });
 };
 
@@ -165,6 +180,17 @@ const bulletsFor = (points, roleIndex) => {
   return out;
 };
 
+// Icon chip + uppercase label + a rule running to the right margin. The chip
+// is a filled rounded rect rather than a glyph: no icon font ships with the
+// document, and an unsupported glyph would render as tofu.
+const SectionHead = ({ styles, label }) => (
+  <View style={styles.sectionHead} wrap={false}>
+    <View style={styles.chip} />
+    <Text style={styles.heading}>{label}</Text>
+    <View style={styles.headingRule} />
+  </View>
+);
+
 const CVDocument = ({ resume, fontFamily = 'Helvetica' }) => {
   const personal = resume?.personal ?? canonical.personal;
   const headline = resume?.headline ?? canonical.headline;
@@ -179,8 +205,6 @@ const CVDocument = ({ resume, fontFamily = 'Helvetica' }) => {
   return (
     <Document title={`${personal.name} – CV`} author={personal.name}>
       <Page size="A4" style={styles.page}>
-        <View style={styles.frame} fixed />
-
         <Text style={styles.name}>{personal.name}</Text>
         <Text style={styles.tagline}>{personal.tagline}</Text>
 
@@ -212,12 +236,10 @@ const CVDocument = ({ resume, fontFamily = 'Helvetica' }) => {
           </>
         )}
 
-        <View style={styles.sectionRule} />
-        <Text style={styles.heading}>Professional Summary</Text>
+        <SectionHead styles={styles} label="Professional Summary" />
         <Text style={styles.paragraph}>{headline}</Text>
 
-        <View style={styles.sectionRule} />
-        <Text style={styles.heading}>Core Skills</Text>
+        <SectionHead styles={styles} label="Core Skills" />
         {skillGroups.map((g) => (
           <View key={g.label} style={styles.skillRow} wrap={false}>
             <Text style={styles.skillLabel}>{g.label}</Text>
@@ -225,42 +247,44 @@ const CVDocument = ({ resume, fontFamily = 'Helvetica' }) => {
           </View>
         ))}
 
-        <View style={styles.sectionRule} />
-        <Text style={styles.heading}>Professional Experience</Text>
+        <SectionHead styles={styles} label="Professional Experience" />
         {experiences.map((exp, i) => (
           // The header group never splits, so a role header can never strand
           // alone at the foot of a page — it moves with its first bullets.
           <View key={`${exp.company}-${i}`} style={styles.jobBlock}>
-            <View wrap={false}>
-              <View style={styles.jobHeader}>
+            <View style={styles.jobGutter}>
+              <Text style={styles.jobDuration}>{exp.duration}</Text>
+            </View>
+            <View style={styles.jobMain}>
+              <View wrap={false}>
                 <Text style={styles.jobCompany}>{exp.company} — {exp.location}</Text>
-                <Text style={styles.jobDuration}>{exp.duration}</Text>
+                <Text style={styles.jobTitle}>{exp.title}</Text>
+                {exp.summary && i < SUMMARY_UNTIL ? (
+                  <Text style={styles.jobSummary}>{exp.summary}</Text>
+                ) : null}
               </View>
-              <Text style={styles.jobTitle}>{exp.title}</Text>
-              {exp.summary && i < SUMMARY_UNTIL ? (
-                <Text style={styles.jobSummary}>{exp.summary}</Text>
+              {bulletsFor(exp.points, i).map((p, idx) => (
+                <View key={idx} style={styles.bulletRow}>
+                  <Text style={styles.bulletDot}>•</Text>
+                  <Text style={styles.bulletText}>{typeof p === 'string' ? p : p.text}</Text>
+                </View>
+              ))}
+              {i < STACK_UNTIL ? (
+                <Text style={styles.jobStack}>Stack: {exp.stack.join(' · ')}</Text>
               ) : null}
             </View>
-            {bulletsFor(exp.points, i).map((p, idx) => (
-              <View key={idx} style={styles.bulletRow}>
-                <Text style={styles.bulletDot}>•</Text>
-                <Text style={styles.bulletText}>{typeof p === 'string' ? p : p.text}</Text>
-              </View>
-            ))}
-            {i < STACK_UNTIL ? (
-              <Text style={styles.jobStack}>Stack: {exp.stack.join(' · ')}</Text>
-            ) : null}
           </View>
         ))}
 
-        <View style={styles.sectionRule} />
-        <Text style={styles.heading}>Education</Text>
-        <View style={styles.eduRow}>
-          <View>
+        <SectionHead styles={styles} label="Education" />
+        <View style={styles.eduRow} wrap={false}>
+          <View style={styles.jobGutter}>
+            <Text style={styles.eduPeriod}>{education.period}</Text>
+          </View>
+          <View style={styles.jobMain}>
             <Text style={styles.eduDegree}>{education.degree}</Text>
             <Text style={styles.eduMeta}>{education.school}</Text>
           </View>
-          <Text style={styles.eduPeriod}>{education.period}</Text>
         </View>
       </Page>
     </Document>

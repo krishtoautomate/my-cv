@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Typography, Paper } from '@mui/material';
 import Section from './Section';
+import { ACCENT_GRADIENT, glassSx, spotlightSx, gradientRingSx, setSpotlight } from '../styles/effects';
 
 const Summary = () => {
   return (
@@ -11,21 +12,28 @@ const Summary = () => {
         </Typography>
         <Paper
           elevation={0}
-          sx={{
+          onMouseMove={setSpotlight}
+          sx={(theme) => ({
+            ...glassSx(theme),
+            ...spotlightSx(theme),
+            ...gradientRingSx(theme, { always: true }),
             p: { xs: 2.5, sm: 3.5 },
-            border: '1px solid',
-            borderColor: 'divider',
-            position: 'relative',
-            overflow: 'hidden',
-            '&::before': {
-              content: '""',
-              position: 'absolute',
-              left: 0, top: 0, bottom: 0,
-              width: 4,
-              background: 'linear-gradient(180deg, #1565C0, #FF7043)',
-            },
-          }}
+            pl: { xs: 3, sm: 4 },
+          })}
         >
+          {/* gradient accent bar */}
+          <Box
+            aria-hidden
+            sx={{
+              position: 'absolute',
+              left: 0,
+              top: 0,
+              bottom: 0,
+              width: 3,
+              background: ACCENT_GRADIENT,
+              opacity: 0.9,
+            }}
+          />
           <Typography variant="body1" paragraph>
             SDET and Test Automation Architect with 10+ years in QA automation and test architecture,
             including 3+ years defining AI quality engineering strategy and platform architecture for

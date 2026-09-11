@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Typography, Stack, IconButton, Tooltip, Chip } from '@mui/material';
 import { Email, LinkedIn, GitHub, LocationOn, Phone } from '@mui/icons-material';
 import { motion } from 'framer-motion';
+import { ACCENT, ACCENT_GRADIENT, gradientTextSx, glassSx, gradientRingSx, setSpotlight } from '../styles/effects';
 
 const reach = [
   { icon: <GitHub />, label: 'GitHub', href: 'https://github.com/krishtoautomate' },
@@ -10,41 +11,52 @@ const reach = [
   { icon: <Phone />, label: 'Phone', href: 'tel:+14389280928' },
 ];
 
-const blob = (color, x, y, delay) => ({
+const blob = (color, x, y, animation) => ({
   position: 'absolute',
-  width: 320,
-  height: 320,
+  width: 340,
+  height: 340,
   borderRadius: '50%',
-  filter: 'blur(80px)',
-  opacity: 0.45,
+  filter: 'blur(90px)',
+  opacity: 0.35,
   background: color,
   top: y,
   left: x,
   zIndex: 0,
   pointerEvents: 'none',
-  animation: `floatBlob 14s ease-in-out ${delay}s infinite`,
+  animation,
 });
 
 const Header = () => {
   return (
-    <Box sx={{
-      position: 'relative',
-      textAlign: 'center',
-      mb: 6,
-      py: { xs: 4, sm: 7 },
-      overflow: 'hidden',
-      borderRadius: 4,
-    }}>
-      <style>{`
-        @keyframes floatBlob {
-          0%   { transform: translate(0, 0) scale(1); }
-          50%  { transform: translate(40px, -30px) scale(1.08); }
-          100% { transform: translate(0, 0) scale(1); }
-        }
-      `}</style>
-      <Box sx={blob('radial-gradient(circle, #1565C0 0%, transparent 70%)', '8%', '-10%', 0)} />
-      <Box sx={blob('radial-gradient(circle, #FF7043 0%, transparent 70%)', '70%', '40%', 3)} />
-      <Box sx={blob('radial-gradient(circle, #7E57C2 0%, transparent 70%)', '40%', '60%', 6)} />
+    <Box
+      onMouseMove={setSpotlight}
+      sx={{
+        position: 'relative',
+        textAlign: 'center',
+        mb: 6,
+        py: { xs: 5, sm: 8 },
+        px: { xs: 2, sm: 4 },
+        overflow: 'hidden',
+        borderRadius: 6,
+        // pointer-tracking spotlight over the hero
+        '@media (hover: hover)': {
+          '&::after': {
+            content: '""',
+            position: 'absolute',
+            inset: 0,
+            borderRadius: 'inherit',
+            background: `radial-gradient(480px circle at var(--mx, 50%) var(--my, 35%), ${ACCENT.indigo}1f, transparent 65%)`,
+            opacity: 0,
+            transition: 'opacity 0.4s ease',
+            pointerEvents: 'none',
+          },
+          '&:hover::after': { opacity: 1 },
+        },
+      }}
+    >
+      <Box sx={blob(`radial-gradient(circle, ${ACCENT.indigo} 0%, transparent 70%)`, '6%', '-12%', 'auroraA 18s ease-in-out infinite')} />
+      <Box sx={blob(`radial-gradient(circle, ${ACCENT.pink} 0%, transparent 70%)`, '68%', '38%', 'auroraB 22s ease-in-out -4s infinite')} />
+      <Box sx={blob(`radial-gradient(circle, ${ACCENT.violet} 0%, transparent 70%)`, '38%', '58%', 'auroraC 26s ease-in-out -10s infinite')} />
 
       <Box sx={{ position: 'relative', zIndex: 1 }}>
         <motion.div
@@ -56,16 +68,9 @@ const Header = () => {
             variant="h1"
             component="h1"
             sx={{
-              mb: 1,
-              background: 'linear-gradient(90deg, #1565C0, #7E57C2, #FF7043)',
-              backgroundSize: '200% 200%',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
+              mb: 1.5,
+              ...gradientTextSx,
               animation: 'gradientShift 8s ease infinite',
-              '@keyframes gradientShift': {
-                '0%, 100%': { backgroundPosition: '0% 50%' },
-                '50%':      { backgroundPosition: '100% 50%' },
-              },
             }}
           >
             Krish Pavuluri
@@ -77,7 +82,7 @@ const Header = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.15 }}
         >
-          <Typography variant="h6" sx={{ color: 'text.secondary', mb: 2.5, fontWeight: 500 }}>
+          <Typography variant="h6" sx={{ color: 'text.secondary', mb: 3, fontWeight: 500, maxWidth: 720, mx: 'auto' }}>
             SDET · Test Automation Architect · Playwright, Selenium & Appium · AI-Driven Automation
           </Typography>
         </motion.div>
@@ -90,11 +95,11 @@ const Header = () => {
             visible: { opacity: 1, transition: { staggerChildren: 0.08, delayChildren: 0.3 } },
           }}
         >
-          <Stack direction="row" spacing={1} justifyContent="center" flexWrap="wrap" useFlexGap sx={{ mb: 3 }}>
+          <Stack direction="row" spacing={1} justifyContent="center" flexWrap="wrap" useFlexGap sx={{ mb: 3.5 }}>
             {[
-              <Chip key="loc" icon={<LocationOn />} label="Montreal, QC" size="small" variant="outlined" />,
-              <Chip key="yrs" label="10+ years experience" size="small" color="primary" variant="outlined" />,
-              <Chip key="stk" label="Banking · Telecom · Rail" size="small" variant="outlined" />,
+              <Chip key="loc" icon={<LocationOn />} label="Montreal, QC" size="small" />,
+              <Chip key="yrs" label="10+ years experience" size="small" />,
+              <Chip key="stk" label="Banking · Telecom · Rail" size="small" />,
             ].map((c, i) => (
               <motion.div
                 key={i}
@@ -103,7 +108,22 @@ const Header = () => {
                   visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
                 }}
               >
-                {c}
+                <Box
+                  sx={(theme) => ({
+                    ...glassSx(theme),
+                    display: 'inline-flex',
+                    borderRadius: 99,
+                    '& .MuiChip-root': {
+                      backgroundColor: 'transparent',
+                      border: 'none',
+                      color: 'text.primary',
+                      fontWeight: 500,
+                    },
+                    '& .MuiChip-icon': { color: 'primary.main' },
+                  })}
+                >
+                  {c}
+                </Box>
               </motion.div>
             ))}
           </Stack>
@@ -125,8 +145,8 @@ const Header = () => {
                   hidden: { opacity: 0, y: 12, scale: 0.85 },
                   visible: { opacity: 1, y: 0, scale: 1, transition: { type: 'spring', stiffness: 300, damping: 20 } },
                 }}
-                whileHover={{ y: -4, scale: 1.06 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ y: -4, scale: 1.08 }}
+                whileTap={{ scale: 0.94 }}
               >
                 <Tooltip title={r.label}>
                   <IconButton
@@ -134,13 +154,16 @@ const Header = () => {
                     href={r.href}
                     target={r.href.startsWith('http') ? '_blank' : undefined}
                     rel={r.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                    color="primary"
-                    sx={{
-                      border: '1px solid',
-                      borderColor: 'divider',
-                      bgcolor: 'background.paper',
-                    }}
                     aria-label={r.label}
+                    sx={(theme) => ({
+                      ...glassSx(theme),
+                      ...gradientRingSx(theme),
+                      color: 'primary.main',
+                      transition: 'box-shadow 0.25s ease',
+                      '&:hover': {
+                        boxShadow: `0 8px 24px ${ACCENT.indigo}40`,
+                      },
+                    })}
                   >
                     {r.icon}
                   </IconButton>
@@ -149,6 +172,21 @@ const Header = () => {
             ))}
           </Stack>
         </motion.div>
+
+        {/* hairline gradient rule anchoring the hero */}
+        <Box
+          aria-hidden
+          sx={{
+            mt: { xs: 4.5, sm: 6 },
+            mx: 'auto',
+            height: '1px',
+            maxWidth: 560,
+            background: ACCENT_GRADIENT,
+            opacity: 0.35,
+            maskImage: 'linear-gradient(90deg, transparent, #000 20%, #000 80%, transparent)',
+            WebkitMaskImage: 'linear-gradient(90deg, transparent, #000 20%, #000 80%, transparent)',
+          }}
+        />
       </Box>
     </Box>
   );
