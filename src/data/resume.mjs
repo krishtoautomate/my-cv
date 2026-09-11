@@ -84,8 +84,8 @@ export const experiences = [
     location: 'Austin, TX',
     title: 'AI Quality Engineering Architect / QA Automation Engineer',
     duration: 'April 2025 – Present',
-    summary: 'Banking automation on Symitar and Backbase using Python/PyTest, TestNG with Java, Playwright with TypeScript, GitHub Actions, and Azure DevOps, with an agentic AI test-generation platform layered on top.',
-    tags: ['banking', 'web', 'api', 'agile', 'ai', 'architecture'],
+    summary: 'Banking automation on Symitar and Backbase across web and mobile using Python/PyTest, TestNG with Java, Playwright with TypeScript, and Appium for iOS/Android, wired into GitHub Actions and Azure DevOps, with an agentic AI test-generation platform layered on top.',
+    tags: ['banking', 'web', 'mobile', 'api', 'agile', 'ai', 'architecture'],
     points: [
       b('Defined the AI quality engineering strategy and platform architecture for the automation program — assessing automation maturity, selecting AI-enabled tooling, and building the reusable framework and accelerators the team delivers against.',
         'strategy', 'architecture', 'platform', 'ai', 'leadership', 'maturity', 'roadmap', 'accelerators', 'framework'),
@@ -95,6 +95,8 @@ export const experiences = [
         'python', 'pytest', 'api', 'requests', 'framework', 'data', 'banking', 'fixtures'),
       b('Built and maintained Playwright/TypeScript suites for UI and end-to-end banking flows, expanding frontend coverage and surfacing defects earlier in the cycle.',
         'playwright', 'typescript', 'ui', 'e2e', 'web', 'banking'),
+      b('Extended the same banking journeys to mobile with Appium, automating iOS and Android flows on real devices and emulators so web and mobile regression run from one framework.',
+        'appium', 'mobile', 'ios', 'android', 'real-devices', 'emulators', 'banking', 'e2e', 'regression', 'framework'),
       b('Automated SOAP API validation with SOAP UI and integrated results into Azure DevOps for real-time reporting against user stories.',
         'soapui', 'soap', 'api', 'azure-devops', 'reporting'),
       b('Configured GitHub Actions pipelines so Java backend and Playwright frontend suites run on every push for fast, trustworthy regression feedback.',
@@ -120,7 +122,7 @@ export const experiences = [
       b('Used AI-assisted tooling across Claude Code and GitHub Copilot to accelerate test design, locator triage, and review of regression failures on Playwright traces.',
         'ai', 'llm', 'copilot', 'playwright', 'self-healing', 'productivity', 'prompt-engineering'),
     ],
-    stack: ['Playwright', 'TypeScript', 'Python', 'PyTest', 'TestNG', 'Java', 'Claude Code', 'Playwright MCP', 'Ollama', 'Azure OpenAI', 'AWS Bedrock', 'Vertex AI', 'GitHub Actions', 'Azure DevOps', 'SOAP UI'],
+    stack: ['Playwright', 'TypeScript', 'Appium', 'Python', 'PyTest', 'TestNG', 'Java', 'Claude Code', 'Playwright MCP', 'Ollama', 'Azure OpenAI', 'AWS Bedrock', 'Vertex AI', 'GitHub Actions', 'Azure DevOps', 'SOAP UI'],
   },
   {
     company: 'RobotActions.com',
