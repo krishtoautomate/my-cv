@@ -101,6 +101,19 @@ Do not work one board to exhaustion. They carry different inventory — the two 
 - **Never invent experience.** Answer screener bundles honestly — a form with a few well-placed NOs is more credible than 23 YESes.
 - **Skip duplicates.** `data/applied-jobs.json` is **not** sufficient on its own: LinkedIn's own tracker read 107 applied against far fewer local entries. Check both.
 
+## Commits, PRs and authorship
+
+**Never add AI co-authorship or attribution anywhere.** Krish's instruction, 2026-09-11: *"never mention coauth by claude in commits or anywhere"*.
+
+- No `Co-Authored-By: Claude …` trailer on commits.
+- No `Claude-Session:` trailer on commits.
+- No "🤖 Generated with Claude Code" footer in PR bodies, issues, or comments.
+- Same applies to any other file, doc, or message that ships from this repo.
+
+This overrides the default Claude Code commit-trailer behaviour. Write the commit message and stop.
+
+Note the distinction: **Claude Code and Playwright MCP remain legitimate CV content** — they are tools Krish uses professionally and appear in `resume.mjs` under AI & LLM skills and in his UFCU bullets. The rule is about authorship credit for repo changes, not about the product name.
+
 ## Deployment
 
 `.github/workflows/deploy.yml` runs on push to `main`: installs deps with Node 18, runs `npm run build`, and publishes `./build` to the `gh-pages` branch via `peaceiris/actions-gh-pages@v3`. No manual steps needed after merging to `main`. The `homepage` field in `package.json` must stay in sync with the deployed URL or asset paths will break.
