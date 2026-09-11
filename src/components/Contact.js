@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Typography, Grid, Paper, Stack } from '@mui/material';
 import { Email, Phone, LinkedIn, GitHub } from '@mui/icons-material';
 import { motion } from 'framer-motion';
+import { ACCENT, ACCENT_GRADIENT, glassSx, spotlightSx, gradientRingSx, setSpotlight } from '../styles/effects';
 
 const channels = [
   { icon: <GitHub />, label: 'GitHub', value: 'krishtoautomate', href: 'https://github.com/krishtoautomate' },
@@ -37,35 +38,40 @@ const Contact = () => {
         <Grid container spacing={2}>
           {channels.map((c) => (
             <Grid item xs={12} sm={6} md={3} key={c.label}>
-              <motion.div variants={itemVariants} whileHover={{ y: -4 }}>
+              <motion.div variants={itemVariants} whileHover={{ y: -4 }} style={{ height: '100%' }}>
                 <Paper
                   component="a"
                   href={c.href}
                   target={c.href.startsWith('http') ? '_blank' : undefined}
                   rel={c.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                   elevation={0}
-                  sx={{
+                  onMouseMove={setSpotlight}
+                  sx={(theme) => ({
+                    ...glassSx(theme),
+                    ...spotlightSx(theme),
+                    ...gradientRingSx(theme),
                     p: 2.5,
                     textDecoration: 'none',
                     color: 'inherit',
                     display: 'block',
-                    border: '1px solid',
-                    borderColor: 'divider',
-                    transition: 'border-color 0.2s ease, box-shadow 0.2s ease',
-                    '&:hover': { borderColor: 'primary.main', boxShadow: 2 },
-                  }}
+                    height: '100%',
+                    transition: 'box-shadow 0.25s ease',
+                    '&:hover': { boxShadow: `0 12px 32px ${ACCENT.indigo}30` },
+                  })}
                 >
                   <Stack direction="row" spacing={1.5} alignItems="center">
                     <Box
                       sx={{
                         color: '#fff',
-                        background: 'linear-gradient(135deg, #1565C0, #7E57C2)',
+                        background: ACCENT_GRADIENT,
                         width: 40,
                         height: 40,
-                        borderRadius: 2,
+                        borderRadius: 2.5,
                         display: 'flex',
                         alignItems: 'center',
                         justifyContent: 'center',
+                        flexShrink: 0,
+                        boxShadow: `0 6px 18px ${ACCENT.indigo}40`,
                       }}
                     >
                       {c.icon}
