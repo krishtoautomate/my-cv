@@ -26,7 +26,7 @@ const orion = {
   title: 'Senior SDET / Playwright Automation Engineer',
   duration: 'August 2025 – Present',
   summary:
-    'Playwright and BDD automation with AI-assisted authoring for JSI Telecom platforms, delivered in-sprint with TDD, reported through Allure, and executed in Docker containers targeted by Helm charts from GitHub Actions and Jenkins build and deploy pipelines.',
+    'Playwright and BDD automation with AI-assisted authoring for JSI Telecom platforms, delivered in-sprint with TDD, reported through Allure, and driven by GitHub Actions and Jenkins pipelines that build, deploy and run the suites in Docker containers.',
   tags: ['telecom', 'web', 'playwright', 'bdd', 'tdd', 'ai', 'devops', 'agile', 'in-sprint'],
   points: [
     b('Built Playwright automation with a BDD layer, turning user stories into executable scenarios the whole team could read.',
@@ -39,8 +39,8 @@ const orion = {
       'allure', 'reporting', 'observability', 'metrics', 'stakeholders'),
     b('Ran regression on every push through GitHub Actions, gating releases with automated quality checks.',
       'github-actions', 'ci-cd', 'regression', 'quality-gates', 'continuous-testing'),
-    b('Used Helm charts to point builds at Docker containers and run the Playwright suites inside them, with GitHub Actions and Jenkins pipelines handling build and deploy and AWS IdP covering authenticated environments.',
-      'devops', 'helm', 'kubernetes', 'docker', 'containers', 'github-actions', 'jenkins', 'ci-cd', 'deployment', 'aws', 'idp', 'pipelines', 'infrastructure'),
+    b('Built and maintained the GitHub Actions and Jenkins pipelines behind build, deploy and regression runs, using Helm charts to target Docker containers the Playwright suites execute in, with AWS IdP for authenticated environments.',
+      'devops', 'github-actions', 'jenkins', 'ci-cd', 'deployment', 'pipelines', 'helm', 'docker', 'containers', 'aws', 'idp', 'infrastructure'),
   ],
   stack: ['Playwright', 'BDD/Cucumber', 'TypeScript', 'Allure', 'GitHub Actions', 'Jenkins', 'Docker', 'Helm', 'AWS IdP', 'Claude Code', 'Playwright MCP'],
 };
