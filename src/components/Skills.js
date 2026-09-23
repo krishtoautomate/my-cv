@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Box, Typography, Grid, Paper } from '@mui/material';
+import { Box, Typography, Grid, Paper, Chip, Stack } from '@mui/material';
 import { Speed, Loop, Science, MenuBook, Hub, Build, Construction } from '@mui/icons-material';
 import { motion } from 'framer-motion';
 import { ACCENT, glassSx, spotlightSx, gradientRingSx, setSpotlight } from '../styles/effects';
+import { skillGroups } from '../data/resume.mjs';
 
 const skills = [
   { name: 'Playwright', img: 'https://playwright.dev/img/playwright-logo.svg' },
@@ -127,6 +128,51 @@ const Skills = () => {
           ))}
         </Grid>
       </motion.div>
+
+      {/* Full toolkit, grouped exactly as on the CV. */}
+      <Typography variant="subtitle1" sx={{ fontWeight: 700, mt: 5, mb: 2, textAlign: 'center' }}>
+        Full Toolkit
+      </Typography>
+      <Grid container spacing={2.5}>
+        {skillGroups.map((group) => (
+          <Grid item xs={12} md={6} key={group.label}>
+            <Paper
+              elevation={0}
+              onMouseMove={setSpotlight}
+              sx={(theme) => ({
+                ...glassSx(theme),
+                ...spotlightSx(theme),
+                ...gradientRingSx(theme),
+                p: 2.25,
+                height: '100%',
+              })}
+            >
+              <Typography
+                variant="overline"
+                sx={{ display: 'block', color: 'primary.main', fontWeight: 700, letterSpacing: '0.1em', mb: 1 }}
+              >
+                {group.label}
+              </Typography>
+              <Stack direction="row" spacing={0.75} flexWrap="wrap" useFlexGap>
+                {group.items.map((item) => (
+                  <Chip
+                    key={item}
+                    label={item}
+                    size="small"
+                    sx={(theme) => ({
+                      backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.05)' : 'rgba(23,27,38,0.04)',
+                      border: '1px solid',
+                      borderColor: 'divider',
+                      transition: 'border-color 0.2s ease, color 0.2s ease',
+                      '&:hover': { borderColor: 'primary.main', color: 'primary.main' },
+                    })}
+                  />
+                ))}
+              </Stack>
+            </Paper>
+          </Grid>
+        ))}
+      </Grid>
     </Box>
   );
 };

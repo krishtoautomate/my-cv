@@ -1,7 +1,8 @@
 import React from 'react';
-import { Box, Typography, Paper } from '@mui/material';
+import { Box, Typography, Paper, Grid } from '@mui/material';
 import Section from './Section';
-import { ACCENT_GRADIENT, glassSx, spotlightSx, gradientRingSx, setSpotlight } from '../styles/effects';
+import { ACCENT_GRADIENT, glassSx, spotlightSx, gradientRingSx, setSpotlight, gradientTextSx } from '../styles/effects';
+import { headline, highlights } from '../data/resume.mjs';
 
 const Summary = () => {
   return (
@@ -34,30 +35,28 @@ const Summary = () => {
               opacity: 0.9,
             }}
           />
-          <Typography variant="body1" paragraph>
-            SDET and Test Automation Architect with 10+ years in QA automation and test architecture,
-            including 3+ years defining AI quality engineering strategy and platform architecture for
-            enterprise test automation. Designs scalable frameworks in Python (PyTest) and Java (TestNG,
-            Cucumber) driving Playwright, Selenium, and Appium across native and React Native iOS/Android
-            apps on real devices, emulators, and simulators, plus mobile web and hybrid flows. Validates
-            REST and SOAP services with Rest-Assured, Requests, and Playwright's built-in API testing;
-            runs performance engineering with JMeter, k6, and LoadRunner; and ships Extent / Allure /
-            Playwright HTML reporting wired into Jira and Slack. Configures Jenkins, GitLab CI, GitHub
-            Actions, and Azure DevOps pipelines for continuous testing across regulated banking, telecom,
-            and rail platforms.
-          </Typography>
-          <Typography variant="body1">
-            Hands-on with AI, LLMs, and agentic systems: builds multi-agent pipelines where custom agents
-            validate user stories, generate test steps, and execute them live through Playwright MCP —
-            capturing locators during the run to auto-generate page objects and step definitions, then
-            closing the loop with reviewer agents that evaluate the generated code, apply fixes, and open
-            pull requests. Applies prompt engineering, embedding pipelines, and RAG retrieval over vector
-            stores to ground agents in product, spec, and test context, and runs model evaluation to score
-            agent and LLM output for correctness, regression, and drift before it reaches CI. Delivers
-            regression suites at 90%+ coverage with strong pass rates, treating tests as production code to
-            keep false fails low and trust in CI high.
-          </Typography>
+          <Typography variant="body1">{headline}</Typography>
         </Paper>
+
+        <Grid container spacing={2} sx={{ mt: 1 }}>
+          {highlights.map((h) => (
+            <Grid item xs={6} md={3} key={h.label}>
+              <Paper
+                elevation={0}
+                sx={(theme) => ({ ...glassSx(theme), p: 2, height: '100%', textAlign: 'center' })}
+              >
+                <Typography
+                  sx={{ fontWeight: 800, fontSize: { xs: '1.05rem', sm: '1.3rem' }, lineHeight: 1.3, ...gradientTextSx }}
+                >
+                  {h.value}
+                </Typography>
+                <Typography variant="body2" sx={{ color: 'text.secondary', mt: 0.5 }}>
+                  {h.label}
+                </Typography>
+              </Paper>
+            </Grid>
+          ))}
+        </Grid>
       </Box>
     </Section>
   );

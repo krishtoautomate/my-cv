@@ -3,12 +3,13 @@ import { Box, Typography, Grid, Paper, Stack } from '@mui/material';
 import { Email, Phone, LinkedIn, GitHub } from '@mui/icons-material';
 import { motion } from 'framer-motion';
 import { ACCENT, ACCENT_GRADIENT, glassSx, spotlightSx, gradientRingSx, setSpotlight } from '../styles/effects';
+import { personal } from '../data/resume.mjs';
 
 const channels = [
-  { icon: <GitHub />, label: 'GitHub', value: 'krishtoautomate', href: 'https://github.com/krishtoautomate' },
-  { icon: <LinkedIn />, label: 'LinkedIn', value: '/in/krishpavuluri', href: 'https://www.linkedin.com/in/krishpavuluri' },
-  { icon: <Email />, label: 'Email', value: 'krishpavulur@gmail.com', href: 'mailto:krishpavulur@gmail.com' },
-  { icon: <Phone />, label: 'Phone', value: '438-928-0928', href: 'tel:+14389280928' },
+  { icon: <GitHub />, label: 'GitHub', value: personal.github.split('/').pop(), href: personal.github },
+  { icon: <LinkedIn />, label: 'LinkedIn', value: `/in/${personal.linkedin.split('/').pop()}`, href: personal.linkedin },
+  { icon: <Email />, label: 'Email', value: personal.email, href: `mailto:${personal.email}` },
+  { icon: <Phone />, label: 'Phone', value: personal.phone, href: `tel:+1${personal.phone.replace(/\D/g, '')}` },
 ];
 
 const containerVariants = {
