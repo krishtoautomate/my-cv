@@ -3,6 +3,7 @@ import { Box, Typography, Paper, Stack, Chip } from '@mui/material';
 import { School } from '@mui/icons-material';
 import Section from './Section';
 import { ACCENT, ACCENT_GRADIENT, glassSx, spotlightSx, gradientRingSx, setSpotlight } from '../styles/effects';
+import { education } from '../data/resume.mjs';
 
 const Education = () => {
   return (
@@ -35,11 +36,11 @@ const Education = () => {
               <School />
             </Box>
             <Box sx={{ flexGrow: 1 }}>
-              <Typography variant="subtitle1" sx={{ fontWeight: 700 }}>Bachelor of Science</Typography>
-              <Typography variant="body2" sx={{ color: 'text.secondary' }}>SRM University, India</Typography>
+              <Typography variant="subtitle1" sx={{ fontWeight: 700 }}>{education.degree}</Typography>
+              <Typography variant="body2" sx={{ color: 'text.secondary' }}>{education.school}</Typography>
             </Box>
             <Chip
-              label="2007 – 2011"
+              label={education.period}
               size="small"
               sx={(theme) => ({
                 color: 'primary.main',

@@ -3,12 +3,13 @@ import { Box, Typography, Stack, IconButton, Tooltip, Chip } from '@mui/material
 import { Email, LinkedIn, GitHub, LocationOn, Phone } from '@mui/icons-material';
 import { motion } from 'framer-motion';
 import { ACCENT, ACCENT_GRADIENT, gradientTextSx, glassSx, gradientRingSx, setSpotlight } from '../styles/effects';
+import { personal } from '../data/resume.mjs';
 
 const reach = [
-  { icon: <GitHub />, label: 'GitHub', href: 'https://github.com/krishtoautomate' },
-  { icon: <LinkedIn />, label: 'LinkedIn', href: 'https://www.linkedin.com/in/krishpavuluri' },
-  { icon: <Email />, label: 'Email', href: 'mailto:krishpavulur@gmail.com' },
-  { icon: <Phone />, label: 'Phone', href: 'tel:+14389280928' },
+  { icon: <GitHub />, label: 'GitHub', href: personal.github },
+  { icon: <LinkedIn />, label: 'LinkedIn', href: personal.linkedin },
+  { icon: <Email />, label: 'Email', href: `mailto:${personal.email}` },
+  { icon: <Phone />, label: 'Phone', href: `tel:+1${personal.phone.replace(/\D/g, '')}` },
 ];
 
 const blob = (color, x, y, animation) => ({
@@ -73,7 +74,7 @@ const Header = () => {
               animation: 'gradientShift 8s ease infinite',
             }}
           >
-            Krish Pavuluri
+            {personal.name}
           </Typography>
         </motion.div>
 
@@ -83,7 +84,7 @@ const Header = () => {
           transition={{ duration: 0.6, delay: 0.15 }}
         >
           <Typography variant="h6" sx={{ color: 'text.secondary', mb: 3, fontWeight: 500, maxWidth: 720, mx: 'auto' }}>
-            SDET · Test Automation Architect · Playwright, Selenium & Appium · AI-Driven Automation
+            {personal.tagline}
           </Typography>
         </motion.div>
 
@@ -97,7 +98,7 @@ const Header = () => {
         >
           <Stack direction="row" spacing={1} justifyContent="center" flexWrap="wrap" useFlexGap sx={{ mb: 3.5 }}>
             {[
-              <Chip key="loc" icon={<LocationOn />} label="Montreal, QC" size="small" />,
+              <Chip key="loc" icon={<LocationOn />} label={personal.location} size="small" />,
               <Chip key="yrs" label="10+ years experience" size="small" />,
               <Chip key="stk" label="Banking · Telecom · Rail" size="small" />,
             ].map((c, i) => (
