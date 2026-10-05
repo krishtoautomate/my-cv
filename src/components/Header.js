@@ -101,6 +101,7 @@ const Header = () => {
               <Chip key="loc" icon={<LocationOn />} label={personal.location} size="small" />,
               <Chip key="yrs" label="10+ years experience" size="small" />,
               <Chip key="stk" label="Banking · Telecom · Rail" size="small" />,
+              ...(personal.clearance ? [<Chip key="clr" label="Secret (Level II) Clearance · Canada" size="small" />] : []),
             ].map((c, i) => (
               <motion.div
                 key={i}

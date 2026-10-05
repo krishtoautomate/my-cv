@@ -11,6 +11,8 @@ export const personal = {
   phone: '438-928-0928',
   github: 'https://github.com/krishtoautomate',
   linkedin: 'https://www.linkedin.com/in/krishpavuluri',
+  // Confirmed by Krish 2026-10-05.
+  clearance: 'Government of Canada Secret (Level II) Security Clearance · valid to 2035',
 };
 
 export const summary = [
@@ -131,11 +133,13 @@ export const experiences = [
     location: 'Montreal, QC',
     title: 'Automation Test Architect — Mobile & Codeless',
     duration: 'February 2025 – April 2025',
-    summary: 'Led codeless automation tooling for native and React Native iOS/Android apps with deep CI/CD and AI integrations.',
-    tags: ['mobile', 'ios', 'android', 'react-native', 'test-architect'],
+    summary: 'Led codeless automation tooling for native and React Native iOS/Android apps and the platform\'s React web app, with deep CI/CD and AI integrations.',
+    tags: ['mobile', 'ios', 'android', 'react-native', 'react', 'web', 'test-architect'],
     points: [
       b('Built a codeless record-and-playback platform for iOS (XCUITest, WebDriverAgent) and Android (UiAutomator, scrcpy), reducing manual testing by ~45%.',
         'codeless', 'ios', 'android', 'xcuitest', 'webdriveragent', 'uiautomator', 'mobile'),
+      b('Built and tested the platform\'s React and TypeScript web app, writing Playwright/TypeScript end-to-end suites that validate page content and user flows.',
+        'react', 'reactjs', 'typescript', 'javascript', 'playwright', 'e2e', 'end-to-end', 'web', 'ui', 'frontend', 'front-end', 'regression', 'functional'),
       b('Implemented AI/ML services as containerized Python APIs (Docker) for AI-assisted element selection, AI chatbot test orchestration, and flake triage — callable from the codeless tools and from CI.',
         'ai', 'llm', 'chatbot', 'docker', 'containers', 'api', 'self-healing', 'python', 'ml'),
       b('Used OpenCV for vision-driven element matching so recorded steps survive layout and theme changes, and served HuggingFace Transformers models on PyTorch and TensorFlow behind those APIs for element classification and intent detection.',
@@ -257,6 +261,31 @@ export const experiences = [
     stack: ['LoadRunner', 'Perfmon', 'TFS', 'SQL Server'],
   },
 ];
+
+// Opt-in roles, never rendered by default. Pull one into a single tailored
+// CV with `npm run tailor -- --jd <path> --output <slug> --include <key>`.
+// Kept off the standard CV on purpose: the dates overlap other roles, and a
+// concurrent side contract reads as moonlighting (Krish, 2026-10-05).
+export const optionalExperiences = {
+  circlek: {
+    insertAfter: 'RobotActions.com',
+    company: 'ThirdBridge — Client: Circle K (Contract)',
+    location: 'Remote',
+    title: 'QA Automation Engineer — React Web & React Native',
+    duration: 'August 2024 – April 2025',
+    summary: 'Contract test automation for Circle K\'s React web app and React Native consumer apps on iOS and Android, plus the APIs behind them.',
+    tags: ['web', 'react', 'frontend', 'mobile', 'ios', 'android', 'react-native', 'retail', 'api', 'contract'],
+    points: [
+      b('Tested Circle K\'s React web app end to end, covering functional and regression flows across releases.',
+        'react', 'reactjs', 'web', 'ui', 'frontend', 'front-end', 'e2e', 'end-to-end', 'regression', 'functional'),
+      b('Automated end-to-end and regression flows for Circle K\'s React Native apps on iOS and Android with Appium.',
+        'appium', 'react-native', 'react', 'mobile', 'ios', 'android', 'e2e', 'end-to-end', 'regression', 'functional'),
+      b('Validated the REST APIs behind the apps, checking responses and data against what the mobile UI displayed.',
+        'api', 'rest', 'integration', 'functional', 'mobile'),
+    ],
+    stack: ['React', 'React Native', 'Appium', 'iOS', 'Android', 'REST APIs'],
+  },
+};
 
 export const education = {
   degree: 'Bachelor of Science',

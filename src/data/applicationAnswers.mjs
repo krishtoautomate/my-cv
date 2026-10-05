@@ -107,14 +107,10 @@ export const applicationAnswers = {
     drugTestOk: true,
     relocationOk: null,
     travelOk: 'Up to 25%',
-    // Krish confirmed 2026-09-09 that he holds a HIGH Canadian government
-    // clearance. The older record said Level A (Reliability); the exact
-    // designation is unconfirmed, so use the generic string on forms and
-    // never type a specific level (Secret / Top Secret / Level II / III)
-    // until he confirms it - overstating a clearance level disqualifies.
-    // Where a form asks a plain yes/no, the answer is yes.
-    securityClearance: 'Active Canadian Government security clearance',
-    securityClearanceDetail: 'High-level Canadian Government clearance (previously recorded as Level A / Reliability; exact designation to be confirmed by Krish)',
+    // Confirmed by Krish 2026-10-05: Government of Canada Secret (Level II),
+    // valid to 2035. Supersedes the older Level A (Reliability) record.
+    securityClearance: 'Government of Canada Secret (Level II) security clearance',
+    securityClearanceDetail: 'Active Government of Canada Secret (Level II) security clearance, valid until 2035',
   },
 
   // Source of CV / cover letter (resolved at runtime)

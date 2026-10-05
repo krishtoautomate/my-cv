@@ -220,6 +220,7 @@ const CVDocument = ({ resume, fontFamily = 'Helvetica' }) => {
           {sep}
           <Link style={styles.link} src={personal.github}>github.com/krishtoautomate</Link>
         </Text>
+        {personal.clearance && <Text style={styles.contactRow}>{personal.clearance}</Text>}
         <View style={styles.ruleThin} />
 
         {highlights.length > 0 && (
