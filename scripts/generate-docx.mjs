@@ -86,7 +86,7 @@ const headerBlock = () => [
   }),
   new Paragraph({
     alignment: AlignmentType.CENTER,
-    spacing: { after: 240 },
+    spacing: { after: personal.clearance ? 60 : 240 },
     children: [
       new TextRun({ text: `${personal.location}  |  ${personal.phone}  |  `, size: 20 }),
       link(personal.email, `mailto:${personal.email}`),
@@ -96,6 +96,11 @@ const headerBlock = () => [
       link('GitHub', personal.github),
     ],
   }),
+  ...(personal.clearance ? [new Paragraph({
+    alignment: AlignmentType.CENTER,
+    spacing: { after: 240 },
+    children: [new TextRun({ text: personal.clearance, size: 20 })],
+  })] : []),
 ];
 
 const highlightsBlock = () => (highlights?.length ? [

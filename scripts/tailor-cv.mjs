@@ -73,7 +73,22 @@ const scoreBullet = (b) => {
 
 const data = await import(pathToFileURL(resolve(repoRoot, 'src/data/resume.mjs')).href);
 
-const tailoredExperiences = data.experiences.map((exp) => {
+// --include circlek[,key2] splices opt-in roles from optionalExperiences
+// into this one CV, right after the role named by their insertAfter.
+const includeKeys = (argMap['--include'] || '').split(',').map((k) => k.trim()).filter(Boolean);
+const baseExperiences = [...data.experiences];
+for (const key of includeKeys) {
+  const opt = data.optionalExperiences?.[key];
+  if (!opt) {
+    console.error(`Unknown --include key "${key}". Available: ${Object.keys(data.optionalExperiences || {}).join(', ')}`);
+    process.exit(1);
+  }
+  const { insertAfter, ...role } = opt;
+  const at = baseExperiences.findIndex((e) => e.company === insertAfter);
+  baseExperiences.splice(at === -1 ? baseExperiences.length : at + 1, 0, role);
+}
+
+const tailoredExperiences = baseExperiences.map((exp) => {
   const ranked = exp.points
     .map((p, i) => ({ p, i, score: scoreBullet(p) }))
     .sort((a, bb) => (bb.score - a.score) || (a.i - bb.i))

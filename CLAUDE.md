@@ -69,6 +69,7 @@ The name check is not cosmetic: at `letterSpacing: 2.6` the name extracted as `K
 - `npm run gen:docx` — regenerates `public/KRISH_PAVULURI_CV.docx`. Runs on `prebuild`.
 - `npm run gen:pdf` — renders `public/KRISH_PAVULURI_CV.pdf` via `@react-pdf/renderer` in Node (`tsx`).
 - `npm run tailor -- --jd <path> --output <slug>` — scores bullet tags against the JD, reorders bullets **and the items within each skill group**, then writes `tailored/KRISH_PAVULURI_CV_<slug>.{pdf,docx}`. `tailored/` is gitignored.
+- `--include <key>` (comma-separated) adds an opt-in role from `optionalExperiences` in `resume.mjs` to that one tailored CV. `circlek` is the ThirdBridge / Circle K contract (React web app plus React Native iOS/Android apps) (Aug 2024 – Apr 2025). It is kept off the standard CV because it overlaps Bell and RobotActions, so include it only when React Native experience is the deciding requirement, and only after Krish agrees for that application.
 
 ### Krish's hard filters — check before tailoring, not after
 
